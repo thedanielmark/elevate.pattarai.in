@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-// import Icon from "@mdi/react";
-// import { mdiArrowRight } from "@mdi/js";
 import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
 
 // Import page specific stuff
@@ -26,18 +24,33 @@ function MainContent(props) {
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
+    document
+      .getElementById("sign-in-button")
+      .setAttribute("disabled", "disabled");
+    document.getElementById("sign-in-button-text").classList.add("d-none");
+    document.getElementById("sign-in-button-loader").classList.remove("d-none");
     if (state.email == "" && state.password != "") {
+      setState((prevState) => ({
+        ...prevState,
+        errorMessage: "Please enter an email ID.",
+      }));
+      document.getElementById("email").classList.remove("red-outline");
+      document
+        .getElementById("sign-in-button")
+        .removeAttribute("disabled", "disabled");
+      document.getElementById("sign-in-button-text").classList.remove("d-none");
+      document.getElementById("sign-in-button-loader").classList.add("d-none");
+    } else if (state.email != "" && state.password == "") {
       setState((prevState) => ({
         ...prevState,
         errorMessage: "Please enter a password.",
       }));
-      document.getElementById("email").classList.add("red-outline");
-    } else if (state.email != "" && state.password == "") {
-      setState((prevState) => ({
-        ...prevState,
-        errorMessage: "Wrong details.",
-      }));
       document.getElementById("password").classList.add("red-outline");
+      document
+        .getElementById("sign-in-button")
+        .removeAttribute("disabled", "disabled");
+      document.getElementById("sign-in-button-text").classList.remove("d-none");
+      document.getElementById("sign-in-button-loader").classList.add("d-none");
     } else if (state.email == "" && state.password == "") {
       setState((prevState) => ({
         ...prevState,
@@ -45,17 +58,23 @@ function MainContent(props) {
       }));
       document.getElementById("email").classList.add("red-outline");
       document.getElementById("password").classList.add("red-outline");
+      document
+        .getElementById("sign-in-button")
+        .removeAttribute("disabled", "disabled");
+      document.getElementById("sign-in-button-text").classList.remove("d-none");
+      document.getElementById("sign-in-button-loader").classList.add("d-none");
     } else {
       document.getElementById("email").classList.remove("red-outline");
       document.getElementById("password").classList.remove("red-outline");
-      // const payload = {
-      //   email: state.email,
-      //   password: state.password.replace(/(\r\n|\n|\r)/gm, ""),
-      // };
-      // console.log(payload);
       axios
         // .post(localStorage.APIRoute + "login.php", payload)
-        .post(localStorage.APIRoute + "login.php?email=" + state.email + "&password=" + state.password)
+        .post(
+          localStorage.APIRoute +
+            "login.php?email=" +
+            state.email +
+            "&password=" +
+            state.password
+        )
         .then(function (response) {
           console.log(response);
           if (response.data === "db-error") {
@@ -63,22 +82,49 @@ function MainContent(props) {
               ...prevState,
               errorMessage: "An unknown error occurred. Code - 1001.",
             }));
+            document
+              .getElementById("sign-in-button")
+              .removeAttribute("disabled", "disabled");
+            document
+              .getElementById("sign-in-button-text")
+              .classList.remove("d-none");
+            document
+              .getElementById("sign-in-button-loader")
+              .classList.add("d-none");
           } else if (response.data === "invalid-password") {
             setState((prevState) => ({
               ...prevState,
               errorMessage: "Email and password do not match.",
             }));
+            document
+              .getElementById("sign-in-button")
+              .removeAttribute("disabled", "disabled");
+            document
+              .getElementById("sign-in-button-text")
+              .classList.remove("d-none");
+            document
+              .getElementById("sign-in-button-loader")
+              .classList.add("d-none");
           } else if (response.data === "user-doesnt-exist") {
             setState((prevState) => ({
               ...prevState,
               errorMessage: "Account does not exist.",
             }));
+            document
+              .getElementById("sign-in-button")
+              .removeAttribute("disabled", "disabled");
+            document
+              .getElementById("sign-in-button-text")
+              .classList.remove("d-none");
+            document
+              .getElementById("sign-in-button-loader")
+              .classList.add("d-none");
           } else {
             localStorage.id = response.data.id;
             localStorage.email = response.data.email;
             localStorage.auth_token = response.data.auth_token;
 
-            if (response.data.emailConfirmed === 0) {
+            if (response.data.emailConfirmed == 0) {
               redirectToVerify();
             } else {
               redirectToHome();
@@ -159,12 +205,14 @@ function MainContent(props) {
                         </div>
                         <div className="mt-3">
                           <button
+                            id="sign-in-button"
                             type="submit"
                             className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn text-white"
                             onClick={handleSubmitClick}
                           >
-                            SIGN IN
+                            <span id="sign-in-button-text">SIGN IN</span>
                             <span
+                              id="sign-in-button-loader"
                               className="spinner-border spinner-border-sm d-none"
                               role="status"
                               aria-hidden="true"
@@ -185,11 +233,6 @@ function MainContent(props) {
                             Forgot password?
                           </a>
                         </div>
-                        {/* <div class="mb-2">
-                            <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                              <i class="mdi mdi-facebook mr-2"></i>Connect using facebook
-                            </button>
-                          </div> */}
                         <div className="mt-4">
                           <Link to={"/register"}>
                             <button className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">

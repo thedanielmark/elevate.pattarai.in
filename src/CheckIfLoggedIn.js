@@ -13,7 +13,7 @@ class ProtectedRoute extends React.Component {
 
   componentDidMount() {
     fetch(
-      "http://localhost:8080/elevate-be-staging/auth-status.php?email=" +
+      localStorage.APIRoute + "auth-status.php?email=" +
         localStorage.email +
         "&auth_token=" +
         localStorage.auth_token
@@ -52,9 +52,6 @@ class ProtectedRoute extends React.Component {
         ) : (
           <Redirect to={{ pathname: "/verify-account" }} />
         );
-      }
-      else {
-        return <Redirect to={{ pathname: "/login" }} />
       }
     }
   }

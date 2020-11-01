@@ -46,15 +46,10 @@ class ProtectedRoute extends React.Component {
     } else {
       const Component = this.props.component;
 
-      if(data.isAuthenticated === true) {
-        return data.emailConfirmed ? (
-          <Component />
-        ) : (
-          <Redirect to={{ pathname: "/verify-account" }} />
-        );
-      }
-      else {
-        return <Redirect to={{ pathname: "/login" }} />
+      if (data.isAuthenticated === true) {
+        return <Component />;
+      } else {
+        return <Redirect to={{ pathname: "/login" }} />;
       }
     }
   }

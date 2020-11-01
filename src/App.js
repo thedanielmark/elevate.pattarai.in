@@ -6,11 +6,14 @@ import {
   Redirect,
 } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import CheckIfLoggedIn from "./CheckIfLoggedIn";
+import CheckIfAccountVerified from "./CheckIfAccountVerified";
 
 // Importing all pages
 import Index from "./pages/Index";
 import Login from "./pages/Login";
-import Test from "./pages/test";
+import VerifyAccount from "./pages/VerifyAccount";
+import Register from "./pages/Register";
 // import CodeOfConduct from "./pages/CodeOfConduct";
 // import ProposalGuidelines from "./pages/ProposalGuidelines";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -30,8 +33,9 @@ export default class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/test" component={Test} />
+          <CheckIfLoggedIn exact path={"/register"} component={Register} />
+          <CheckIfLoggedIn exact path="/login" component={Login} />
+          <CheckIfAccountVerified exact path="/verify-account" component={VerifyAccount} />
           {/* <Route exact path="/code-of-conduct" component={CodeOfConduct} />
           <Route
             exact
