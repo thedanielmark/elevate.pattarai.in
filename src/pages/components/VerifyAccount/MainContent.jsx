@@ -21,8 +21,87 @@ function MainContent(props) {
     }));
   };
 
+  const resetSubmitButton = (e) => {
+    document
+      .getElementById("verify-account-button")
+      .removeAttribute("disabled", "disabled");
+    document
+      .getElementById("verify-account-button-text")
+      .classList.remove("d-none");
+    document
+      .getElementById("verify-account-button-loader")
+      .classList.add("d-none");
+  };
+
+  const resetResendButton = (e) => {
+    document
+      .getElementById("resend-email-button")
+      .removeAttribute("disabled", "disabled");
+    document
+      .getElementById("resend-email-button-text")
+      .classList.remove("d-none");
+    document
+      .getElementById("resend-email-button-loader")
+      .classList.add("d-none");
+  };
+
+  const resendEmail = (e) => {
+    document
+      .getElementById("resend-email-button")
+      .setAttribute("disabled", "disabled");
+    document
+      .getElementById("resend-email-button-text")
+      .classList.add("d-none");
+    document
+      .getElementById("resend-email-button-loader")
+      .classList.remove("d-none");
+
+    axios
+      .post(
+        localStorage.APIRoute +
+          "resend-verification-mail.php?email=" +
+          localStorage.email +
+          "&auth_token=" +
+          localStorage.auth_token
+      )
+      .then(function (response) {
+        console.log(response);
+        if (response.data === "mail-error") {
+          setState((prevState) => ({
+            ...prevState,
+            errorMessage: "An error occurred. Code - 5000.",
+          }));
+          resetSubmitButton();
+        } else if (response.data === "db-error") {
+          setState((prevState) => ({
+            ...prevState,
+            errorMessage:
+              "An error occurred. Code - 1001.",
+          }));
+          resetResendButton();
+        } else if (response.data === "mail-success") {
+          resetResendButton();
+          document.getElementById("resend-email-button-text").innerHTML = "Verification Code Sent.";
+        } else if (response.data === "invalid-auth") {
+          redirectToLogin();
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   const handleSubmitClick = (e) => {
     e.preventDefault();
+    document
+      .getElementById("verify-account-button")
+      .setAttribute("disabled", "disabled");
+    document
+      .getElementById("verify-account-button-text")
+      .classList.add("d-none");
+    document
+      .getElementById("verify-account-button-loader")
+      .classList.remove("d-none");
     if (state.code == "") {
       setState((prevState) => ({
         ...prevState,
@@ -30,6 +109,15 @@ function MainContent(props) {
       }));
       document.getElementById("code").classList.add("red-outline");
     } else {
+      document
+        .getElementById("verify-account-button")
+        .setAttribute("disabled", "disabled");
+      document
+        .getElementById("verify-account-button-text")
+        .classList.add("d-none");
+      document
+        .getElementById("verify-account-button-loader")
+        .classList.remove("d-none");
       document.getElementById("code").classList.remove("red-outline");
       axios
         .post(
@@ -37,35 +125,31 @@ function MainContent(props) {
             "verify-account.php?email=" +
             localStorage.email +
             "&code=" +
-            state.code
+            state.code +
+            "&client=react"
         )
         .then(function (response) {
           console.log(response);
-          if (response.data === "db-error") {
+          if (response.data === "error") {
             setState((prevState) => ({
               ...prevState,
-              errorMessage: "An unknown error occurred. Code - 1001.",
+              errorMessage: "An error occurred. Code - 1001.",
             }));
-          } else if (response.data === "invalid-password") {
+            resetSubmitButton();
+          } else if (response.data === "invalid-code") {
             setState((prevState) => ({
               ...prevState,
-              errorMessage: "Email and password do not match.",
+              errorMessage: "Oops, seems like the code you entered was wrong.",
             }));
-          } else if (response.data === "user-doesnt-exist") {
+            resetSubmitButton();
+          } else if (response.data === "unknown-client") {
             setState((prevState) => ({
               ...prevState,
-              errorMessage: "Account does not exist.",
+              errorMessage:
+                "A required parameter was missing from your request. Code - 2000",
             }));
-          } else {
-            localStorage.id = response.data.id;
-            localStorage.email = response.data.email;
-            localStorage.auth_token = response.data.auth_token;
-
-            if (response.data.emailConfirmed == 0) {
-              redirectToVerify();
-            } else {
-              redirectToHome();
-            }
+          } else if (response.data === "verified") {
+            redirectToHome();
             props.showError(null);
           }
         })
@@ -79,8 +163,14 @@ function MainContent(props) {
     props.history.push("/home");
   };
 
-  const redirectToVerify = () => {
-    props.history.push("/verify-account");
+  const redirectToLogin = () => {
+    localStorage.auth_token = "";
+    props.history.push("/login");
+  };
+
+  const logout = () => {
+    localStorage.auth_token = "";
+    props.history.push("/login");
   };
 
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -105,7 +195,7 @@ function MainContent(props) {
             <div className="main-panel" style={{ backgroundColor: "#000" }}>
               <div className="content-wrapper d-flex align-items-center auth px-0">
                 <div className="row w-100 mx-0">
-                  <div className="col-lg-4 mx-auto">
+                  <div className="col-lg-6 col-xl-5 mx-auto">
                     <div className="auth-form-light text-left py-5 px-4 px-sm-5">
                       <div className="mb-3">
                         <img src={logo} alt="logo" />
@@ -146,13 +236,30 @@ function MainContent(props) {
                             ></span>
                           </button>
                         </div>
-                        <div className="mt-4 text-muted">Not your email?</div>
                         <div className="mt-3">
-                          <Link to={"/register"}>
-                            <button className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">
-                              Change Email ID
-                            </button>
-                          </Link>
+                          <button
+                            className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+                            id="resend-email-button"
+                            onClick={resendEmail}
+                          >
+                            <span id="resend-email-button-text">
+                              Resend Code
+                            </span>
+                            <span
+                              id="resend-email-button-loader"
+                              className="spinner-border spinner-border-sm d-none"
+                              role="status"
+                              aria-hidden="true"
+                            ></span>
+                          </button>
+                        </div>
+                        <div className="mt-3">
+                          <button
+                            className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+                            onClick={logout}
+                          >
+                            Logout
+                          </button>
                         </div>
                       </form>
                     </div>

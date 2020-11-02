@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
+  Redirect
 } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import CheckIfLoggedIn from "./CheckIfLoggedIn";
@@ -25,7 +25,7 @@ import Register from "./pages/Register";
 // import Bookmarks from "./pages/Bookmarks";
 // import CreateProposal from "./pages/CreateProposal";
 // import Settings from "./pages/Settings";
-// import Error404 from "./pages/Error404";
+import Error404 from "./pages/Error404";
 
 export default class App extends Component {
   render() {
@@ -33,7 +33,7 @@ export default class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Index} />
-          <CheckIfLoggedIn exact path={"/register"} component={Register} />
+          <CheckIfLoggedIn exact path="/register" component={Register} />
           <CheckIfLoggedIn exact path="/login" component={Login} />
           <CheckIfAccountVerified exact path="/verify-account" component={VerifyAccount} />
           {/* <Route exact path="/code-of-conduct" component={CodeOfConduct} />
@@ -58,9 +58,9 @@ export default class App extends Component {
             path="/create-proposal"
             component={CreateProposal}
           />
-          <ProtectedRoute exact path="/settings" component={Settings} />
+          <ProtectedRoute exact path="/settings" component={Settings} />  */}
           <Route exact path="/404" component={Error404} />
-          <Redirect to="/404" /> */}
+          <Redirect to="/404" />
         </Switch>
       </Router>
     );

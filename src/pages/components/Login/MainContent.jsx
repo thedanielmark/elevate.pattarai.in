@@ -168,7 +168,7 @@ function MainContent(props) {
             <div className="main-panel" style={{ backgroundColor: "#000" }}>
               <div className="content-wrapper d-flex align-items-center auth px-0">
                 <div className="row w-100 mx-0">
-                  <div className="col-lg-4 mx-auto">
+                  <div className="col-lg-6 col-xl-5 mx-auto">
                     <div className="auth-form-light text-left py-5 px-4 px-sm-5">
                       <div className="mb-3">
                         <img src={logo} alt="logo" />
