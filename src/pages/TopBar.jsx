@@ -1,281 +1,215 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import fetch from "unfetch";
-import useSWR from "swr";
+import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
 
-export default function TopBar() {
-  const fetcher = (url) => fetch(url).then((r) => r.json());
+function TopBar(props) {
+  const logout = () => {
+    localStorage.auth_token = "";
+    props.history.push("/login");
+  };
 
-  // Get data from API
-  const { data, error } = useSWR(
-    "http://localhost:8080/elevate-be-staging/get-profile.php?id=" +
-      localStorage.id +
-      "&auth_token=" +
-      localStorage.auth_token,
-    fetcher
-  );
+  const toggleDropdownMenu = () => {
+    document.getElementById("bottomNavbar").classList.toggle("header-toggled");
+  };
 
-  if (!data) return <h2>Loading...</h2>;
-  if (error) return <h2 className="text-danger">Error bitches</h2>;
-
+  // if (!data) return <h2>Loading...</h2>;
+  // if (error) return <h2 className="text-danger">Error bitches</h2>;
   return (
     <React.Fragment>
-      <div
-        className="d-flex justify-content-between flex-column"
-        style={{ height: "100vh" }}
-      >
-        <div>
-          <img
-            src="images/logo-full.png"
-            className="w-100 ml-2 px-5 pt-3 pb-5 d-none d-md-block"
-          />
-
-          <div className="my-1 ml-5">
-            <div
-              className="d-flex justify-content-between align-items-center"
-              onClick={clickedHome}
-            >
-              <a>
-                <Link to={"/home"}>
-                  <div
-                    className="sidebar-link d-inline-flex align-items-center"
-                    data-sidebar="bio-link"
-                  >
-                    <Icon path={mdiAccountCircle} size={1.2} className="mr-3" />
-                    <span className="d-none d-lg-block">Profile</span>
-                  </div>
-                </Link>
+      <div className="horizontal-menu">
+        <nav
+          className="navbar top-navbar col-lg-12 col-12 p-0"
+          style={{ backgroundColor: "black" }}
+        >
+          <div className="container">
+            <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+              <a className="navbar-brand brand-logo" href="index.html">
+                <img src="images/logo-white.svg" alt="logo" />
               </a>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-                id="bio-spinner"
-              ></div>
-            </div>
-          </div>
-
-          <div className="my-1 ml-5">
-            <div
-              className="d-flex justify-content-between align-items-center"
-              onClick={clickedDiscover}
-            >
-              <a>
-                <Link to={"/discover"}>
-                  <div
-                    className="sidebar-link d-inline-flex align-items-center"
-                    data-sidebar="discover-link"
-                  >
-                    <Icon path={mdiCloudSearch} size={1.2} className="mr-3" />
-                    <span className="d-none d-lg-block">Discover</span>
-                  </div>
-                </Link>
+              <a className="navbar-brand brand-logo-mini" href="index.html">
+                <img src="images/logo-mini.svg" alt="logo" />
               </a>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-                id="discover-spinner"
-              ></div>
             </div>
-          </div>
-
-          <div className="my-1 ml-5">
-            <div
-              className="d-flex justify-content-between align-items-center"
-              onClick={clickedMyProposals}
-            >
-              <a>
-                <Link to={"/my-proposals"}>
-                  <div
-                    className="sidebar-link d-inline-flex align-items-center"
-                    data-sidebar="my-proposals-link"
+            <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+              <ul className="navbar-nav navbar-nav-right">
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+                    id="notificationDropdown"
+                    href="#"
+                    data-toggle="dropdown"
                   >
-                    <Icon
-                      path={mdiFileDocumentMultiple}
-                      size={1.2}
-                      className="pb-1 mr-3"
-                    />
-                    <span className="d-none d-lg-block">Proposed</span>
-                  </div>
-                </Link>
-              </a>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-                id="my-proposals-spinner"
-              ></div>
-            </div>
-          </div>
-
-          <div className="my-1 ml-5">
-            <div
-              className="d-flex justify-content-between align-items-center"
-              onClick={clickedApprovedProposals}
-            >
-              <a>
-                <Link to={"/approved-proposals"}>
+                    <i className="mdi mdi-bell-outline mx-0" />
+                  </a>
                   <div
-                    className="sidebar-link d-inline-flex align-items-center"
-                    data-sidebar="approved-proposals-link"
+                    className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                    aria-labelledby="notificationDropdown"
                   >
-                    <Icon
-                      path={mdiTextBoxCheck}
-                      size={1.2}
-                      className="pb-1 mr-3"
-                    />
-                    <span className="d-none d-lg-block">Approved</span>
+                    <p className="mb-0 font-weight-normal float-left dropdown-header">
+                      Notifications
+                    </p>
+                    <a className="dropdown-item preview-item">
+                      <div className="preview-thumbnail">
+                        <div className="preview-icon bg-success">
+                          <i className="mdi mdi-information mx-0" />
+                        </div>
+                      </div>
+                      <div className="preview-item-content">
+                        <h6 className="preview-subject font-weight-normal">
+                          Application Error
+                        </h6>
+                        <p className="font-weight-light small-text mb-0 text-muted">
+                          Just now
+                        </p>
+                      </div>
+                    </a>
+                    <a className="dropdown-item preview-item">
+                      <div className="preview-thumbnail">
+                        <div className="preview-icon bg-warning">
+                          <i className="mdi mdi-settings mx-0" />
+                        </div>
+                      </div>
+                      <div className="preview-item-content">
+                        <h6 className="preview-subject font-weight-normal">
+                          Settings
+                        </h6>
+                        <p className="font-weight-light small-text mb-0 text-muted">
+                          Private message
+                        </p>
+                      </div>
+                    </a>
+                    <a className="dropdown-item preview-item">
+                      <div className="preview-thumbnail">
+                        <div className="preview-icon bg-info">
+                          <i className="mdi mdi-account-box mx-0" />
+                        </div>
+                      </div>
+                      <div className="preview-item-content">
+                        <h6 className="preview-subject font-weight-normal">
+                          New user registration
+                        </h6>
+                        <p className="font-weight-light small-text mb-0 text-muted">
+                          2 days ago
+                        </p>
+                      </div>
+                    </a>
                   </div>
-                </Link>
-              </a>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-                id="approved-proposals-spinner"
-              ></div>
-            </div>
-          </div>
-
-          <div className="my-1 ml-5">
-            <div
-              className="d-flex justify-content-between align-items-center"
-              onClick={clickedSubmitPropsals}
-            >
-              <a>
-                <Link to={"/bookmarks"}>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                    id="messageDropdown"
+                    href="#"
+                    data-toggle="dropdown"
+                  >
+                    <i className="mdi mdi-email-outline mx-0" />
+                    <span className="count" />
+                  </a>
                   <div
-                    className="sidebar-link d-inline-flex align-items-center"
-                    data-sidebar="submit-proposals-link"
+                    className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                    aria-labelledby="messageDropdown"
                   >
-                    <Icon path={mdiBookmark} size={1.2} className="pb-1 mr-3" />
-                    <span className="d-none d-lg-block">Bookmarks</span>
+                    <p className="mb-0 font-weight-normal float-left dropdown-header">
+                      Messages
+                    </p>
+                    <a className="dropdown-item preview-item">
+                      <div className="preview-thumbnail">
+                        <img
+                          src="images/danny.jpg"
+                          alt="image"
+                          className="profile-pic"
+                        />
+                      </div>
+                      <div className="preview-item-content flex-grow">
+                        <h6 className="preview-subject ellipsis font-weight-normal">
+                          David Grey
+                        </h6>
+                        <p className="font-weight-light small-text text-muted mb-0">
+                          The meeting is cancelled
+                        </p>
+                      </div>
+                    </a>
                   </div>
-                </Link>
-              </a>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-                id="submit-proposal-spinner"
-              ></div>
-            </div>
-          </div>
-
-          <div className="my-1 ml-5">
-            <div
-              className="d-flex justify-content-between align-items-center"
-              id="logoutButton"
-            >
-              <div
-                className="sidebar-link d-inline-flex align-items-center"
-                data-sidebar="logout-link"
+                </li>
+                <li className="nav-item nav-profile dropdown">
+                  <a
+                    className="nav-link"
+                    href="#"
+                    data-toggle="dropdown"
+                    id="profileDropdown"
+                  >
+                    <img src="images/danny.jpg" alt="profile" />
+                  </a>
+                  <div
+                    className="dropdown-menu dropdown-menu-right navbar-dropdown"
+                    aria-labelledby="profileDropdown"
+                  >
+                    <a className="dropdown-item">
+                      <i className="mdi mdi-settings text-primary" />
+                      Settings
+                    </a>
+                    <a className="dropdown-item" onClick={logout}>
+                      <i className="mdi mdi-logout text-primary" />
+                      Logout
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <button
+                className="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+                type="button"
+                data-toggle="horizontal-menu-toggle"
+                onClick={toggleDropdownMenu}
               >
-                <Icon path={mdiLogout} size={1.2} className="pb-1 mr-3" />
-                <span className="d-none d-lg-block">Logout</span>
-              </div>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-                id="logout-spinner"
-              ></div>
+                <span className="mdi mdi-menu" />
+              </button>
             </div>
           </div>
-
-          <div className="mt-4 mx-5">
-            <div className="d-flex justify-content-between align-items-center">
-              <Link to={"/create-proposal"}
-                className="btn btn-primary btn-lg rounded-pill w-100 font-weight-semi-bold"
-                style={{ fontSize: "1rem" }}
-              >
-                Create Proposal
-              </Link>
-
-              <div
-                className="spinner-border spinner-border-sm mr-4 text-grey d-none"
-                role="status"
-              ></div>
-            </div>
+        </nav>
+        <nav className="bottom-navbar" id="bottomNavbar">
+          <div className="container">
+            <ul className="nav page-navigation justify-content-around">
+              <li className="nav-item mx-lg-2">
+                <Link to={"/profile"} className="nav-link">
+                  <i className="mdi mdi-account menu-icon" />
+                  <span className="menu-title">Profile</span>
+                </Link>
+              </li>
+              <li className="nav-item mx-lg-2">
+                <a className="nav-link" href="pages/widgets/widgets.html">
+                  <i className="mdi mdi-file-find menu-icon" />
+                  <span className="menu-title">Discover</span>
+                </a>
+              </li>
+              <li className="nav-item mx-lg-2">
+                <a className="nav-link" href="pages/widgets/widgets.html">
+                  <i className="mdi mdi-pencil-box-outline menu-icon" />
+                  <span className="menu-title">My Proposals</span>
+                </a>
+              </li>
+              <li className="nav-item mx-lg-2">
+                <a className="nav-link" href="pages/widgets/widgets.html">
+                  <i className="mdi mdi-checkbox-multiple-marked menu-icon" />
+                  <span className="menu-title">Approved Proposals</span>
+                </a>
+              </li>
+              <li className="nav-item mx-lg-2">
+                <a className="nav-link" href="pages/widgets/widgets.html">
+                  <i className="mdi mdi-bookmark menu-icon" />
+                  <span className="menu-title">Bookmarks</span>
+                </a>
+              </li>
+              <li className="nav-item mx-lg-2">
+                <a className="nav-link" href="pages/widgets/widgets.html">
+                  <i className="mdi mdi-plus-circle menu-icon" />
+                  <span className="menu-title">Create Proposal</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div>
-          <div className="ml-5 mb-4 dropup">
-            <div
-              className="d-flex justify-content-between user-select-none"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              style={{ cursor: "pointer" }}
-            >
-              <div className="d-flex">
-                <img
-                  style={{
-                    backgroundImage: `url(${data.profile_picture_url})`,
-                  }}
-                  className="mr-3 sidebar-profile-picture"
-                />
-                <div>
-                  <p
-                    className="font-weight-bold my-0"
-                    style={{ lineHeight: 1 }}
-                  >
-                    {data.full_name}
-                  </p>
-                  <span className="text-grey">Manage</span>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <Icon path={mdiChevronUp} size={1.4} className="mr-3" />
-              </div>
-            </div>
-            <div
-              className="dropdown-menu mb-4 dropdown-dark"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <a className="dropdown-item" href="">
-                <Icon path={mdiAccountPlus} size={1} className="pb-1 mr-3" />
-                Add Account
-              </a>
-              <a className="dropdown-item" href="">
-                <Icon path={mdiCog} size={1} className="pb-1 mr-3" />
-                Settings
-              </a>
-              <a
-                className="dropdown-item"
-                data-sidebar="logout-link"
-                style={{ cursor: "pointer" }}
-              >
-                <Icon path={mdiLogout} size={1} className="pb-1 mr-3" />
-                Logout
-              </a>
-            </div>
-          </div>
-        </div>
+        </nav>
       </div>
     </React.Fragment>
   );
 }
 
-function clickedHome() {
-  document.getElementById("bio-spinner").classList.remove("d-none");
-}
-
-function clickedDiscover() {
-  document.getElementById("discover-spinner").classList.remove("d-none");
-}
-
-function clickedSubmitPropsals() {
-  document.getElementById("submit-proposal-spinner").classList.remove("d-none");
-}
-
-function clickedMyProposals() {
-  document.getElementById("my-proposals-spinner").classList.remove("d-none");
-}
-
-function clickedApprovedProposals() {
-  document
-    .getElementById("approved-proposals-spinner")
-    .classList.remove("d-none");
-}
+export default withRouter(TopBar);

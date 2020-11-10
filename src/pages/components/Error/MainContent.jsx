@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
-import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
-
-// Import page specific stuff
-import logo from "../../../images/logo-xs.png";
+import { BrowserRouter as Link } from "react-router-dom";
 
 export default function MainContent() {
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -31,7 +27,10 @@ export default function MainContent() {
                 <div className="col-lg-7 mx-auto text-white">
                   <div className="row align-items-center d-flex flex-row">
                     <div className="col-lg-6 text-lg-right pr-lg-4 d-flex justify-content-center justify-content-lg-end">
-                      <span className="mb-0 text-white font-weight-bold" style={{ fontSize: "12rem" }}>
+                      <span
+                        className="mb-0 text-white font-weight-bold"
+                        style={{ fontSize: "12rem" }}
+                      >
                         404
                       </span>
                     </div>
@@ -44,7 +43,9 @@ export default function MainContent() {
                   </div>
                   <div className="row mt-5">
                     <div className="col-12 text-center mt-xl-2">
-                      <Link to={"/home"} className="text-white display-5">Take me home</Link>
+                      <Link to={"/profile"} className="text-white display-5">
+                        Take me home
+                      </Link>
                     </div>
                   </div>
                   <div className="row mt-5">
