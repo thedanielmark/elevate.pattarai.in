@@ -125,4 +125,5 @@ $(document).ready(function () {
   })(jQuery);
 });
 
-localStorage.APIRoute = "http://localhost:8080/elevate-be-staging/";
+// localStorage.APIRoute = "http://api./elevate-be-staging/";
+localStorage.APIRoute = "https://api.pattarai.in/";
