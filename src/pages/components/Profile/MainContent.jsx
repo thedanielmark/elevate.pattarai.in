@@ -38,7 +38,7 @@ class MainContent extends React.Component {
       );
   }
 
-  render() {
+  render(props) {
     const logout = () => {
       localStorage.auth_token = "";
       props.history.push("/login");
@@ -340,15 +340,30 @@ class MainContent extends React.Component {
             </div>
           </div> */}
           <div
-            className="container d-flex justify-content-center align-items-center"
+            className="container d-flex justify-content-center align-items-center col-lg-8 col-xl-6"
             style={{ height: "100vh", width: "100vw" }}
           >
-            Thank you for signing up for Elevate by Pattarai. <br /> The CfP
-            Portal is still under active development but don't worry; we've got
-            your email ID and we'll shoot you an email as soon as the CfP is
-            open so you can submit your proposals and check out all the fun
-            stuff we've got in store for you! <br /> Thank you for your
-            patience! :) <br /> <Link to={"/home"} onClick={logout}>Logout</Link>
+            <motion.div
+              exit={{ opacity: 0 }}
+              initial="initial"
+              animate="animate"
+            >
+              <motion.div variants={fadeIn1}>
+                <h4 className="text-white text-center">
+                  Thank you for signing up for Elevate by Pattarai. <br />
+                  <br /> The CfP Portal is still under active development but
+                  don't worry; we've got your email ID and we'll shoot you an
+                  email as soon as the CfP is open so you can submit your
+                  proposals and check out all the fun stuff we've got in store
+                  for you! <br />
+                  <br /> Thank you for your patience! :) <br />
+                  <br />
+                  <Link to={"/home"} onClick={logout}>
+                    Logout
+                  </Link>
+                </h4>
+              </motion.div>
+            </motion.div>
           </div>
         </React.Fragment>
       );
