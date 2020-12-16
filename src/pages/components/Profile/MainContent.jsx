@@ -39,6 +39,11 @@ class MainContent extends React.Component {
   }
 
   render() {
+    const logout = () => {
+      localStorage.auth_token = "";
+      props.history.push("/login");
+    };
+
     const easing = [0.6, -0.05, 0.01, 0.99];
 
     const fadeIn1 = {
@@ -146,7 +151,7 @@ class MainContent extends React.Component {
     } else {
       return (
         <React.Fragment>
-          <div className="container-fluid px-0">
+          {/* <div className="container-fluid px-0">
             <div className="main-panel pb-5">
               <div className="content-wrapper px-0">
                 <motion.div
@@ -333,6 +338,17 @@ class MainContent extends React.Component {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div
+            className="container d-flex justify-content-center align-items-center"
+            style={{ height: "100vh", width: "100vw" }}
+          >
+            Thank you for signing up for Elevate by Pattarai. <br /> The CfP
+            Portal is still under active development but don't worry; we've got
+            your email ID and we'll shoot you an email as soon as the CfP is
+            open so you can submit your proposals and check out all the fun
+            stuff we've got in store for you! <br /> Thank you for your
+            patience! :) <br /> <Link to={"/home"} onClick={logout}>Logout</Link>
           </div>
         </React.Fragment>
       );
