@@ -340,7 +340,7 @@ class MainContent extends React.Component {
             </div>
           </div> */}
           <div
-            className="container d-flex justify-content-center align-items-center col-lg-8 col-xl-6"
+            className="container d-flex justify-content-center align-items-center col-lg-8 col-xl-5"
             style={{ height: "100vh", width: "100vw" }}
           >
             <motion.div
