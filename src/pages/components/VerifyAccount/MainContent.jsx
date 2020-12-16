@@ -81,7 +81,7 @@ function MainContent(props) {
           resetResendButton();
         } else if (response.data === "mail-success") {
           resetResendButton();
-          document.getElementById("resend-email-button-text").innerHTML = "Verification Code Sent.";
+          document.getElementById("resend-email-button-text").innerHTML = "Verification Code Sent";
         } else if (response.data === "invalid-auth") {
           redirectToLogin();
         }
