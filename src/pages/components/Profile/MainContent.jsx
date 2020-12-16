@@ -41,7 +41,7 @@ class MainContent extends React.Component {
   render(props) {
     const logout = () => {
       localStorage.auth_token = "";
-      props.history.push("/login");
+      window.location.replace("/login");
     };
 
     const easing = [0.6, -0.05, 0.01, 0.99];
