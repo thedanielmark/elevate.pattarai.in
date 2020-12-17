@@ -29414,4 +29414,19 @@ div.tagsinput span.tag a {
   }
 }
 
+.gradient-button {
+  color: #ffffff;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #7d26c2, #fd0081);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #000000 inset;
+}
+
+.gradient-button:hover {
+  box-shadow: none;
+  color: white;
+}
+
 /*# sourceMappingURL=../maps/horizontal-layout-light/style.css.map */
