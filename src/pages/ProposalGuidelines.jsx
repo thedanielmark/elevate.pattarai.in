@@ -4,7 +4,7 @@ import React from "react";
 export default function ProposalGuidelines() {
   return (
     <div className="container pt-5 justify-content-center text-white" style={{fontFamily: '"Montserrat"'}}>
-      <h1 >Proposal Guidelines</h1>
+      <h1 className="text-center">Proposal Guidelines</h1>
        <div className="container pt-3 justify-content-center text-white" >
         <h3><strong>What’s a CFP?</strong></h3>
         <p style={{fontSize: 'medium'}}>
