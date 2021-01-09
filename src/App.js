@@ -5,7 +5,6 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import ProtectedRoute from "./ProtectedRoute";
 import CheckIfLoggedIn from "./CheckIfLoggedIn";
 import CheckIfAccountVerified from "./CheckIfAccountVerified";
 
@@ -17,14 +16,7 @@ import Register from "./pages/Register";
 import CodeOfConduct from "./pages/CodeOfConduct";
 import ProposalGuidelines from "./pages/ProposalGuidelines";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Profile from "./pages/Profile";
-import EditProfile from "./pages/EditProfile";
 import Tracks from "./pages/Tracks";
-// import Discover from "./pages/Discover";
-// import MyProposals from "./pages/MyProposals";
-// import ApprovedProposals from "./pages/ApprovedProposals";
-// import Bookmarks from "./pages/Bookmarks";
-import CreateProposal from "./pages/CreateProposal";
 // import Settings from "./pages/Settings";
 import Error404 from "./pages/Error404";
 

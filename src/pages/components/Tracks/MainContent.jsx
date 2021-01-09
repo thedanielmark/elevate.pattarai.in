@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Icon from "@mdi/react";
-import { mdiArrowRight } from "@mdi/js";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 // Import page specific stuff
@@ -22,52 +20,9 @@ export default function MainContent() {
     },
   };
 
-  const fade2 = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        duration: 2,
-        ease: easing,
-      },
-    },
-  };
-
-  const fade3 = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        duration: 3,
-        ease: easing,
-      },
-    },
-  };
-
-  const fade4 = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        duration: 4,
-        ease: easing,
-      },
-    },
-  };
-
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <motion.div
-        variants={fade1}
-        style={{ minHeight: "100vh" }}
-        className="d-flex justify-content-between flex-column"
-      >
+      <motion.div variants={fade1} className="container">
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
             <img src={logo} className="elevate-logo" />
@@ -95,87 +50,521 @@ export default function MainContent() {
             everyone.
           </h5>
         </div>
+        <div className="container mt-5 d-flex justify-content-center">
+          <div id="content">
+            <ul className="timeline">
+              <li className="event" data-date="Software">
+                <h3>Trending Tech</h3>
+                <p>
+                  Artificial Intelligence (AI), Machine Learning (ML), Internet
+                  of Things (IoT), Blockchain, Mobile
+                </p>
+              </li>
+              <li className="event" data-date="2:30 - 4:00pm">
+                <h3>Storage and Networking</h3>
+                <p>
+                  Cloud Native Storage, Software Defined Storage, Storage
+                  Management, Distributed File System, Datastores, Big Data,
+                  NFV/ VNF, DPDK, ODL, Software Defined Networking.
+                </p>
+              </li>
+              <li className="event" data-date="5:00 - 8:00pm">
+                <h3>Open Hybrid Cloud</h3>
+                <p>
+                  Multi-Cloud, Automation, OpenStack, Kubernetes, Serverless,
+                  Microservices, Containers, OpenShift/ PaaS, Hybrid Cloud
+                  Management, Operators, CNI, Virtualization, Kernel, Service
+                  Mesh.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
 
-        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-5 px-0">
-          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-            <motion.div variants={fade2}>
-              <div className="landing-big-text text-center col-12">
-                Global Engineering Conference by Pattarai
-              </div>
-            </motion.div>
-          </motion.div>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
 
-          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-            <motion.div variants={fade3}>
-              <div className="text-uppercase text-center text-light mt-5">
-                <h4 className="font-weight-semi-bold">
-                  <span className="font-weight-normal">February 2021</span>
-                  <span className="text-secondary px-3">|</span>
-                  Online
-                </h4>
-              </div>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
 
-              <div className="text-uppercase text-center text-light mt-5">
-                <h6 className="font-weight-semi-bold">
-                  <Link to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
-                    Buy Free Tickets
-                  </Link>
-                </h6>
-              </div>
-            </motion.div>
-          </motion.div>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+              <li className="event" data-date="8:30 - 9:30pm">
+                <h3>Developer Tools</h3>
+                <p>
+                  Container Tooling, CI/CD, DevOps, Code Editors Cloud native
+                  IDE, CLI, Local Development for Containers, Language Runtime,
+                  Debugging/Tracing, QE.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-          <motion.div variants={fade4}>
-            <div className="text-secondary text-center py-4 d-md-none">
-              <h5>
-                Hosted by{" "}
-                <strong>
-                  <a href="https://pattarai.in/" className="link-to-light">
-                    Pattarai
-                  </a>
-                </strong>
-              </h5>
-            </div>
-
-            <div className="container mb-4 text-center text-secondary">
-              <ul className="nav justify-content-center d-block d-lg-flex flex-row-reverse">
-                <li className="nav-item">
-                  <a
-                    className="nav-link link-to-light"
-                    href="mailto:elevate@pattarai.in"
-                    target="top"
-                  >
-                    elevate@pattarai.in
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <Link to="/proposal-guidelines">
-                    <span className="nav-link link-to-light">
-                      Proposal Guidelines
-                    </span>
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <Link to="/code-of-conduct">
-                    <span className="nav-link link-to-light">
-                      Code of Conduct
-                    </span>
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link link-to-light">
-                    Copyright &copy; 2020 Pattarai. All Rights Reserved.
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-        </motion.div>
       </motion.div>
     </motion.div>
   );
