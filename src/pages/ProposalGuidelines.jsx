@@ -3,7 +3,9 @@ import React from "react";
 //Functional Component 
 export default function ProposalGuidelines() {
   return (
-    <div className="container pt-2 justify-content-center" style={{fontFamily: '"Montserrat"'}}>
+    <div className="container pt-5 justify-content-center text-white" style={{fontFamily: '"Montserrat"'}}>
+      <h1 >Proposal Guidelines</h1>
+       <div className="container pt-3 justify-content-center text-white" >
         <h3><strong>What’s a CFP?</strong></h3>
         <p style={{fontSize: 'medium'}}>
           A CFP is a conference announcement, also known as a Call for Proposals
@@ -30,5 +32,6 @@ export default function ProposalGuidelines() {
         <i>Happy Writing and Happy Presenting!
         </i>
       </div>
+    </div>
   );
 }
