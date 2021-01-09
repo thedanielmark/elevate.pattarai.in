@@ -24,7 +24,7 @@ export default function MainContent() {
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1} className="container">
       <div className="container pt-5 text-center">
-        <h3 style={{color:'#eeeeee'}}>
+        <h3 style={{color:'#eeeeee', fontFamily:'Montserrat'}}>
         <strong> elevate^ </strong>Conference - Code of Conduct<br />
         </h3>
         <p className='text-justify pt-2' style={{color:'#aaaaaa', lineHeight:'25px'}}>
