@@ -115,13 +115,23 @@ export default function MainContent() {
                 </h4>
               </div>
 
-              <div className="text-uppercase text-center text-light mt-5">
-                <h6 className="font-weight-semi-bold">
-                  <Link to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
-                    Buy Free Tickets
-                  </Link>
-                </h6>
-              </div>
+              <span className='d-block d-md-flex container justify-content-center '>
+                <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
+                  <h6 className="font-weight-semi-bold">
+                    <Link to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                      Buy Free Tickets
+                    </Link>
+                  </h6>
+                </div>
+
+                <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
+                  <h6 className="font-weight-semi-bold">
+                    <Link to={"/tracks"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                      View Tracks
+                    </Link>
+                  </h6>
+                </div>
+              </span>
             </motion.div>
           </motion.div>
         </div>
