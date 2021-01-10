@@ -107,7 +107,7 @@ export default function MainContent() {
 
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade3}>
-              <div className="text-uppercase text-center text-light mt-5">
+              <div className="text-uppercase text-center text-light mt-5 ">
                 <h4 className="font-weight-semi-bold">
                   <span className="font-weight-normal">February 2021</span>
                   <span className="text-secondary px-3">|</span>

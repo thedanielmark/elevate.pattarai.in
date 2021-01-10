@@ -60,7 +60,7 @@ export default function MainContent() {
                   of Things (IoT), Blockchain, Mobile
                 </p>
               </li>
-              <li className="event" data-date="2:30 - 4:00pm">
+              <li className="event" data-date="">
                 <h3>Storage and Networking</h3>
                 <p>
                   Cloud Native Storage, Software Defined Storage, Storage
@@ -68,7 +68,7 @@ export default function MainContent() {
                   NFV/ VNF, DPDK, ODL, Software Defined Networking.
                 </p>
               </li>
-              <li className="event" data-date="5:00 - 8:00pm">
+              <li className="event" data-date="">
                 <h3>Open Hybrid Cloud</h3>
                 <p>
                   Multi-Cloud, Automation, OpenStack, Kubernetes, Serverless,
@@ -77,7 +77,7 @@ export default function MainContent() {
                   Mesh.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Developer Tools</h3>
                 <p>
                   Container Tooling, CI/CD, DevOps, Code Editors Cloud native
@@ -85,7 +85,7 @@ export default function MainContent() {
                   Debugging/Tracing, QE.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Nanomaterials and their Properties</h3>
                 <p>
                 Nanoparticles, nanocrystals, nanocomposites, colloids, sols, 
@@ -94,7 +94,7 @@ export default function MainContent() {
                 in the nano-world.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Micro-electro-mechanical Systems, NEMS and Micro-mechatronicss</h3>
                 <p>
                 iniaturized structures, sensors, actuators, and microelectronics, 
@@ -102,7 +102,7 @@ export default function MainContent() {
                 and microactuators. Transducers.Rings a bell? Converging to nano?
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Energy and Storage Systems</h3>
                 <p>
                 In electrical energy storage, “nano” is big and getting bigger.
@@ -112,7 +112,7 @@ export default function MainContent() {
                 the ongoing research in nano energy storage.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Nano-fabrication and Nano-lithographys</h3>
                 <p>
                 One nanometer is 10-9 meter, or a millionth of a millimeter. Can you 
@@ -122,7 +122,7 @@ export default function MainContent() {
                 and memory chips. Exciting?
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Quantum Physics and Quantum Computing</h3>
                 <p>
                 From Schrödinger's cat to Shor’s algorithm, this is the right place to 
@@ -131,7 +131,7 @@ export default function MainContent() {
                 error correction, cryptography, what not? Interesting? Intimidating?
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Academic Research / White Paper</h3>
                 <p>
                 Got a crazy research that is worth sharing with the world? This is 
@@ -140,7 +140,7 @@ export default function MainContent() {
                 of the elevate^now newsletter.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Computer Vision</h3>
                 <p>
                 CV is ever surpassing boundaries set by human imagination in an 
@@ -152,7 +152,7 @@ export default function MainContent() {
 
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Artificial Intelligence and Learning</h3>
                 <p>
                 From the Ad we just saw on Instagram to the last YouTube video you watched 
@@ -164,7 +164,7 @@ export default function MainContent() {
                 Show us your competence. 
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Applied Machine Learning</h3>
                 <p>
                 How about some self-driving cars or pizza delivering drones? Be it filtering 
@@ -175,7 +175,7 @@ export default function MainContent() {
                 upcoming advancements.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Tools for Development</h3>
                 <p>
                 How can amateur developers or hobbyists get their hands dirty with AI, Quantum 
@@ -184,7 +184,7 @@ export default function MainContent() {
                 To all the ROS or undercut AI/ML platform fans out there.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Modern Web and Mobile Application Development</h3>
                 <p>
                 Application development has been constantly evolving with new frameworks, 
@@ -195,7 +195,7 @@ export default function MainContent() {
                 frameworks to work!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Computing at scale</h3>
                 <p>
                 The operations of modern cloud computing including physical bare-metal machines, 
@@ -203,7 +203,7 @@ export default function MainContent() {
                 and other buzzwords - your cloud and apps-at-scale topics go here.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Software Quality and Development Methodologies</h3>
                 <p>
                 Follow an interesting development methodology in your organization? Scrum? 
@@ -212,7 +212,7 @@ export default function MainContent() {
                 practice techniques like CI/CD in your organization or team!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Information Security, Privacy and Data Governance</h3>
                 <p>
                 With all your data living on the cloud, the internet knows you better than 
@@ -222,7 +222,7 @@ export default function MainContent() {
                 What should I know as an enterprise to handle my customer’s data safely?
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Hardware, Networks and Systems Engineering</h3>
                 <p>
                 Facing a hardware challenge? Do you have an insanely crazy hardware solution? 
@@ -230,7 +230,7 @@ export default function MainContent() {
                 Just an out-of-the-box systems thingy? You’re at the right place!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Operating Systems and Memory</h3>
                 <p>
                 All the low-level Linux and open-source software systems, over here! Monolithic, 
@@ -238,7 +238,7 @@ export default function MainContent() {
                 topics. Not for the light-hearted! ;)
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Let’s talk about open source!</h3>
                 <p>
                 How to embrace open-source? How difficult is it to move to the open source world? 
@@ -246,7 +246,7 @@ export default function MainContent() {
                 open source headed to? All such discussions, over here, please!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Graphics and Multimedia</h3>
                 <p>
                 To all the fellow creatives out there! Inspire us with your design principles. 
@@ -255,7 +255,7 @@ export default function MainContent() {
                 </p>
               </li>
 
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Academic Research / White Paper</h3>
                 <p>
                 Got a crazy research that is worth sharing with the world? This is where you 
@@ -263,7 +263,7 @@ export default function MainContent() {
                 The best articles will be featured in the next edition of the elevate^now newsletter.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Hyperloop</h3>
                 <p>
                 Creating quite the buzz since 2012, the Hyperloop is a proposed mode of passenger 
@@ -272,7 +272,7 @@ export default function MainContent() {
                 conversations, this is the place!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>E-Vehicles</h3>
                 <p>
                 Formula E shocked the system and broke various myths related to EVs. ”Electric vehicles” 
@@ -281,7 +281,7 @@ export default function MainContent() {
                 to know more about E-Vehicles. 
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Hybrid Vehicles</h3>
                 <p>
                 Want to go eco, but yet a die-hard fan of the IC engine? So pick a hybrid! Do join 
@@ -289,7 +289,7 @@ export default function MainContent() {
                 and why they are just great!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Sustainable Spacecrafts and Aircrafts </h3>
                 <p>
                 Achieving NGO previous  Drones are very helpful to keep a continuous logistic operation 
@@ -299,7 +299,7 @@ export default function MainContent() {
                 this venture? Here's a call to all space enthusiasts, Come, talk and listen!
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Academic Research / White Paper</h3>
                 <p>
                 Got a crazy research that is worth sharing with the world? This is where you have 
@@ -307,7 +307,7 @@ export default function MainContent() {
                 will be featured in the next edition of the elevate^now newsletter.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>5G Revolution</h3>
                 <p>
                 How long will you rely on people's ability to identify weeds and get rid of them? 
@@ -316,7 +316,7 @@ export default function MainContent() {
                 the need for manpower in Agriculture agronomics / industries / small scale etc.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Telemed</h3>
                 <p>
                 The incorporation of 5G technology will make it possible to overcome barriers and reduce 
@@ -324,7 +324,7 @@ export default function MainContent() {
                 procedure. Interested? engage here.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Smart Cities</h3>
                 <p>
                 Among the many innovations of the future that 5G will enable, smart cities will be one 
@@ -335,20 +335,20 @@ export default function MainContent() {
                 highly connected cities of the future. Traverse the new era of 5G networks with smart cities now!.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Mixed Reality</h3>
                 <p>
                 Blends in with our daily lives. Video games, medicine, education. Virtual Reality and 
                 Holograms are here to stay.
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Connected Vehicles</h3>
                 <p>
                 Cars that can communicate bidirectionally with other systems outside of the car
                 </p>
               </li>
-              <li className="event" data-date="8:30 - 9:30pm">
+              <li className="event" data-date="">
                 <h3>Academic Research / White Papery</h3>
                 <p>
                 Got a crazy research that is worth sharing with the world? This is where you have to do it! 
