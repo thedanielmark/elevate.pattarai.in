@@ -73,12 +73,14 @@ export default function MainContent() {
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
             <img src={logo} className="elevate-logo" />
-            <h5
-              className="text-secondary col-6 text-left d-none d-lg-block"
-              style={{ borderLeft: "1px solid #666" }}
+            <div
+              className="text-secondary text-left  d-none d-lg-block"
+              style={{ borderLeft: "2px solid #666", height: '80px' }}
             >
-              An interactive online experience by the committee, free for
-              everyone.
+            </div>
+            <h5 className="text-secondary col-6 text-left d-none d-lg-block ">
+                An interactive online experience by the committee, free for
+                everyone.
             </h5>
           </div>
           <div className="d-flex align-items-center">
