@@ -168,6 +168,14 @@ export default function MainContent() {
                 </li>
 
                 <li className="nav-item">
+                  <Link to="/privacy-policy">
+                    <span className="nav-link link-to-light">
+                      Privacy Policy
+                    </span>
+                  </Link>
+                </li>
+
+                <li className="nav-item">
                   <a className="nav-link link-to-light">
                     Copyright &copy; 2020 Pattarai. All Rights Reserved.
                   </a>
