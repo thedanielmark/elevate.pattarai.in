@@ -4,6 +4,8 @@ import Icon from "@mdi/react";
 import { mdiArrowRight } from "@mdi/js";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
+
+
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
 
