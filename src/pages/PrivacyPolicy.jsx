@@ -3,6 +3,7 @@ import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
 import logo from "../../src/images/elevate_square.png";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 //Functional Component
 export default function PrivacyPolicy() {
@@ -24,9 +25,9 @@ export default function PrivacyPolicy() {
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants="{fade1}" className="container py-3">
         <div className="container py-5 text-center">
-          <a href="https://elevate.pattarai.in/">
+          <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
-          </a>
+          </Link>
           <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
             PRIVACY POLICY
           </h4>

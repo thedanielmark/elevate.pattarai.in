@@ -43,8 +43,10 @@ export default function MainContent() {
                   </div>
                   <div className="row mt-5">
                     <div className="col-12 text-center mt-xl-2">
-                      <Link to={"/profile"} className="text-white display-5">
-                        Take me home
+                      <Link to={"/"} >
+                          <div className="text-white display-5"> 
+                           Take me home.
+                          </div>
                       </Link>
                     </div>
                   </div>

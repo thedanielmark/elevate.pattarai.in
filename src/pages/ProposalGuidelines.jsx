@@ -3,6 +3,7 @@ import React from "react";
 import "../App.css";
 import logo from "../../src/images/elevate_square.png";
 import { motion } from "framer-motion";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 //Functional Component
 export default function ProposalGuidelines() {
@@ -22,14 +23,14 @@ export default function ProposalGuidelines() {
 
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <motion.div variants={fade1} className="container">
+      <motion.div variants={fade1}>
         <div
           className="container py-5 text-center text-white px-4"
           style={{ fontFamily: '"Montserrat"' }}
         >
-          <a href="https://elevate.pattarai.in/">
+          <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
-          </a>
+          </Link>
           <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
             PROPOSAL GUIDELINES
           </h4>
