@@ -17,6 +17,8 @@ import CodeOfConduct from "./pages/CodeOfConduct";
 import ProposalGuidelines from "./pages/ProposalGuidelines";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Tracks from "./pages/Tracks";
+import CFP from "./pages/CFP";
+
 // import Settings from "./pages/Settings";
 import Error404 from "./pages/Error404";
 
@@ -41,6 +43,7 @@ export default class App extends Component {
             component={ProposalGuidelines}
           />
           <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+          <Route exact path="/cfp" component={CFP} />
           
           <Route exact path="/404" component={Error404} />
           <Redirect to="/404" />

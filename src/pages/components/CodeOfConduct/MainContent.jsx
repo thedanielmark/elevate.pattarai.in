@@ -66,7 +66,7 @@ export default function MainContent() {
             Code of Conduct allows Pattarai to create the best experience
             possible for all attendees.
             <br /> <br />
-            <strong>Expected Behavior</strong> <br />
+            <strong>Expected Behaviour</strong> <br />
             Exercise consideration and respect in your speech and actions.
             Attempt collaboration before conflict. Refrain from demeaning,
             discriminatory, or harassing behavior and speech. Be mindful of your
@@ -96,21 +96,21 @@ export default function MainContent() {
             fully engaged, discussions should be focused on the meeting topic at
             hand. All participants must be able and welcome to equitably and
             effectively participate. It is not a violation of the
-            conferenceConduct Policy to express an opinion, raise research or
+            conference Conduct Policy to express an opinion, raise research or
             describe an experience (“articulation”) that is at odds with the
             opinions of or is offensive to others—if the articulation is part of
             an on-point discussion of the Virtual Society Meeting topic at hand
             and is offered in a manner that does not interfere with others’
             reasonable ability and welcome to participate fully. That means
             expressing differing positions with respect and consideration for
-            all, in a manner that reflects intellectual rigor and is
+            all, in a manner that reflects intellectual rigour and is
             demonstrably mindful of minimizing, as reasonably possible, its
             potential adverse effect on others’ ability to participate.
-            (Offering an advance warning of the potential for impact on others
+            (Offering a warning of the potential for impact on others
             is one way to demonstrate such respect and consideration for all.)
             It also means not making an articulation that is reasonably expected
-            to cause offense gratuitously (i.e., unrelated or unnecessary for
-            the work on that topic). It means not directing the articulation as
+            to cause offence gratuitously (i.e., unrelated or unnecessary for
+            the work on that topic). It a not directing the articulation as
             a personal attack or put-down of an individual, and not dominating
             the discussion. It further means demonstrating consideration for
             anyone who appears to be in distress by promptly stopping the cause

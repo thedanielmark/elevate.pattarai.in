@@ -135,6 +135,14 @@ export default function MainContent() {
                     </Link>
                   </h6>
                 </div>
+
+                <div className="text-uppercase text-center d-none text-light mt-5 px-md-3 px-0">
+                  <h6 className="font-weight-semi-bold">
+                    <Link to={"/cfp"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                      Submit a Proposal
+                    </Link>
+                  </h6>
+                </div>
               </span>
             </motion.div>
           </motion.div>
