@@ -103,7 +103,7 @@ export default function MainContent() {
         <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-5 px-0">
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade2}>
-              <div className="landing-big-text text-center col-12">
+              <div className="landing-big-text text-center col-12" style={{lineHeight:'120px'}}>
                 Global Engineering Conference by Pattarai
               </div>
             </motion.div>
@@ -113,7 +113,7 @@ export default function MainContent() {
             <motion.div variants={fade3}>
               <div className="text-uppercase text-center text-light mt-5 ">
                 <h4 className="font-weight-semi-bold">
-                  <span className="font-weight-normal">February 2021</span>
+                  <span className="font-weight-normal">MARCH 2021</span>
                   <span className="text-secondary px-3">|</span>
                   Online
                 </h4>
