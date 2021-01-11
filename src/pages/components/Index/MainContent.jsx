@@ -195,7 +195,7 @@ export default function MainContent() {
                       Privacy Policy
                     </span>
                   </Link>
-                </li>
+                </li> 
 
                 <li className="nav-item">
                   <a className="nav-link link-to-light">

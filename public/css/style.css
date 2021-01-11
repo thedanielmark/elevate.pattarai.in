@@ -39843,6 +39843,7 @@ div.tagsinput span.tag a {
 
 .timeline .event:before,
 .timeline .event:after {
+
   position: absolute;
   display: block;
   top: 0;
@@ -39852,9 +39853,11 @@ div.tagsinput span.tag a {
   left: -207px;
   content: attr(data-date);
   text-align: right;
-  font-weight: 100;
-  font-size: 0.9em;
+  font-weight: bold;
+  font-size: 1.2em;
   min-width: 120px;
+  letter-spacing: 3px;
+  line-height: 20px;
 }
 
 @media (max-width: 767px) {
@@ -39893,6 +39896,7 @@ div.tagsinput span.tag a {
 }
 
 .rtl .timeline .event::before {
+
   left: 0;
   right: -170px;
 }
@@ -39900,6 +39904,14 @@ div.tagsinput span.tag a {
 .rtl .timeline .event::after {
   left: 0;
   right: -55.8px;
+}
+
+.text-pink {
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #e154e6;
 }
 
 /*# sourceMappingURL=../maps/horizontal-layout-light/style.css.map */

@@ -97,7 +97,7 @@ export default function MainContent() {
                 <div className="card-body d-flex justify-content-center col-12">
                   <ul className="timeline mr-3">
                     <li className="event" data-date="TRANSCEND">
-                      <h3>Computer Vision</h3>
+                      <h3 className='text-pink'>Computer Vision</h3>
                       <p>
                         CV is ever surpassing boundaries set by human
                         imagination in an ever transforming world where machines
@@ -109,7 +109,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Artificial Intelligence and Learning</h3>
+                      <h3 className='text-pink'>Artificial Intelligence and Learning</h3>
                       <p>
                         From the ad you just saw on Instagram to the last
                         YouTube video you watched today, computers suggest where
@@ -121,7 +121,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Applied Machine Learning</h3>
+                      <h3 className='text-pink'>Applied Machine Learning</h3>
                       <p>
                         How about some self-driving cars or pizza delivering
                         drones? Be it filtering spam emails or data science,
@@ -134,7 +134,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Big Data, Analytics and Business Intelligence</h3>
+                      <h3 className='text-pink'>Big Data, Analytics and Business Intelligence</h3>
                       <p>
                         With more “people” and “things” gaining access to the
                         internet, the volume of data uploaded to the internet is
@@ -147,7 +147,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Tools for Development</h3>
+                      <h3 className='text-pink'>Tools for Development</h3>
                       <p>
                         How can amateur developers or hobbyists get their hands
                         dirty with AI, Embedded Systems and Robotics? Talk about
@@ -158,7 +158,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Open Source Embedded Systems</h3>
+                      <h3 className='text-pink'>Open Source Embedded Systems</h3>
                       <p>
                         Let’s talk about the huge range of open source platforms
                         and software available for embedded developers. This is
@@ -169,7 +169,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Embedded AI Applications</h3>
+                      <h3 className='text-pink'>Embedded AI Applications</h3>
                       <p>
                         Enterprises are enjoying plenty of applications over
                         embedded systems with AI capabilities in areas including
@@ -190,7 +190,7 @@ export default function MainContent() {
                 <div className="card-body d-flex justify-content-center col-12">
                   <ul className="timeline mr-3">
                     <li className="event" data-date="EDGE">
-                      <h3>Telemed</h3>
+                      <h3 className='text-pink'>Telemed</h3>
                       <p>
                         The incorporation of 5G technology will make it possible
                         to overcome barriers and reduce the current latency
@@ -199,7 +199,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Smart Cities</h3>
+                      <h3 className='text-pink'>Smart Cities</h3>
                       <p>
                         Among the many innovations of the future that 5G will
                         enable, smart cities will be one of the most
@@ -213,7 +213,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Mixed Reality</h3>
+                      <h3 className='text-pink'>Mixed Reality</h3>
                       <p>
                         Blends in with our daily lives. Augmenting the reality
                         to make virtual innovations. Video games, medicine,
@@ -222,7 +222,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3> Embedded Systems</h3>
+                      <h3 className='text-pink'> Embedded Systems</h3>
                       <p>
                         5G promises a 100X speed boost compared to 4G LTE.
                         Imagine such a technology being embedded in your system
@@ -232,7 +232,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3> Edge Computing and 5G Networks</h3>
+                      <h3 className='text-pink'> Edge Computing and 5G Networks</h3>
                       <p>
                         Beyond being able to download a full-length HD movie to
                         your phone in seconds, 5G is really about connecting
@@ -245,7 +245,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Moving Smart</h3>
+                      <h3 className='text-pink'>Moving Smart</h3>
                       <p>
                         The thirst for electric vehicles started hundreds of
                         years back.. Want to go eco, but yet a die-hard fan of
@@ -267,7 +267,7 @@ export default function MainContent() {
                 <div className="card-body d-flex justify-content-center col-12">
                   <ul className="timeline mr-3">
                     <li className="event" data-date="NANO">
-                      <h3>Nanomaterials and their Properties</h3>
+                      <h3 className='text-pink'>Nanomaterials and their Properties</h3>
                       <p>
                         Nanoparticles, nanocrystals, nanocomposites, colloids,
                         sols, everything-nano-pro and how their properties are
@@ -276,7 +276,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>
+                      <h3 className='text-pink'>
                         Micro-electro-mechanical Systems, NEMS and
                         Micro-mechatronics
                       </h3>
@@ -288,7 +288,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Energy and Storage Systems</h3>
+                      <h3 className='text-pink'>Energy and Storage Systems</h3>
                       <p>
                         In electrical energy storage, “nano” is big and getting
                         bigger. Graphenes! With the increasing demand for
@@ -300,7 +300,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Nano-fabrication and Nano-lithography</h3>
+                      <h3 className='text-pink'>Nano-fabrication and Nano-lithography</h3>
                       <p>
                         One nanometer is 10-9 meter, or a millionth of a
                         millimeter. Can you imagine the devices fabricated at
@@ -312,7 +312,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Quantum Physics and Quantum Computing</h3>
+                      <h3 className='text-pink'>Quantum Physics and Quantum Computing</h3>
                       <p>
                         From Schrödinger's cat to Shor’s algorithm, this is the
                         right place to talk about the emerging hero in the
@@ -331,7 +331,7 @@ export default function MainContent() {
                 <div className="card-body d-flex justify-content-center col-12">
                   <ul className="timeline mr-3">
                     <li className="event" data-date="EDIFICE">
-                      <h3>Modern Web and Mobile Application Development</h3>
+                      <h3 className='text-pink'>Modern Web and Mobile Application Development</h3>
                       <p>
                         Application development has been constantly evolving
                         with new frameworks, development tools, AI and
@@ -344,7 +344,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Computing at scale</h3>
+                      <h3 className='text-pink'>Computing at scale</h3>
                       <p>
                         The operations of modern cloud computing including
                         physical bare-metal machines, VMs and containers. Grid
@@ -354,7 +354,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Software Quality and Development Methodologies</h3>
+                      <h3 className='text-pink'>Software Quality and Development Methodologies</h3>
                       <p>
                         Follow an interesting development methodology in your
                         organization? Scrum? Sprints? XP? Agile? We would like
@@ -365,7 +365,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Information Security, Privacy and Data Governance</h3>
+                      <h3 className='text-pink'>Information Security, Privacy and Data Governance</h3>
                       <p>
                         With all your data living on the cloud, the internet
                         knows you better than you do! What techniques are
@@ -377,7 +377,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Hardware, Networks and Systems Engineering</h3>
+                      <h3 className='text-pink'>Hardware, Networks and Systems Engineering</h3>
                       <p>
                         Facing a hardware challenge? Do you have an insanely
                         crazy hardware solution? Found a unique approach to
@@ -387,7 +387,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Operating Systems and Memory</h3>
+                      <h3 className='text-pink'>Operating Systems and Memory</h3>
                       <p>
                         All the low-level Linux and open-source software
                         systems, over here! Monolithic, microkernel, hybrid
@@ -397,7 +397,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Let’s talk about open source!</h3>
+                      <h3 className='text-pink'>Let’s talk about open source!</h3>
                       <p>
                         How to embrace open-source? How difficult is it to move
                         to the open source world? How does it feel like to
@@ -407,7 +407,7 @@ export default function MainContent() {
                       </p>
                     </li>
                     <li className="event" data-date="">
-                      <h3>Graphics and Multimedia</h3>
+                      <h3 className='text-pink'>Graphics and Multimedia</h3>
                       <p>
                         To all the fellow creatives out there! Inspire us with
                         your design principles. Want to talk about super cool
