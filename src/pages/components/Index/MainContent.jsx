@@ -103,7 +103,7 @@ export default function MainContent() {
         <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-5 px-0">
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade2}>
-              <div className="landing-big-text text-center col-12" style={{lineHeight:'120px'}}>
+              <div className="landing-big-text text-center col-12" style={{height:'200px'}}>
                 Global Engineering Conference by Pattarai
               </div>
             </motion.div>

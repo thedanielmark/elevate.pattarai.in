@@ -28,7 +28,7 @@ export default function MainContent() {
       <motion.div variants={fade2} className="container">
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
-            <Link to='/'>
+            <Link to='/' className='d-flex justify-content-center'>
               <img src={logo} className="elevate-logo" />
             </Link>
             <div
@@ -36,7 +36,7 @@ export default function MainContent() {
               style={{ borderLeft: "2px solid #666", height: "80px" }}
             ></div>
             <h5 className="text-secondary col-6 text-left d-none d-lg-block ">
-              An interactive online experience by the committee, free for
+              An interactive online experience, free for
               everyone.
             </h5>
           </div>
@@ -266,7 +266,7 @@ export default function MainContent() {
               <div className="" style={{ backgroundColor: "#070707" }}>
                 <div className="card-body d-flex justify-content-center col-12">
                   <ul className="timeline mr-3">
-                    <li className="event" data-date="NANO">
+                    <li className="event" data-date="QUANTUM">
                       <h3 className='text-pink'>Nanomaterials and their Properties</h3>
                       <p>
                         Nanoparticles, nanocrystals, nanocomposites, colloids,
