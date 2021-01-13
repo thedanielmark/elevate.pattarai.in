@@ -29,7 +29,7 @@ export default function MainContent() {
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
             <Link to="/" className="d-flex justify-content-center">
-              <Link to="/"><img src={logo} alt="conf_elevate" className="elevate-logo" /></Link>
+              <a href="/"><img src={logo} alt="conf_elevate" className="elevate-logo" /></a>
             </Link>
             <div
               className="text-secondary text-left  d-none d-lg-block"
