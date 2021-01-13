@@ -31,10 +31,10 @@ export default function ProposalGuidelines() {
           <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
+          <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>
             PROPOSAL GUIDELINES
           </h4>
-          <p
+          <h5
             className="text-justify pt-5"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -44,7 +44,7 @@ export default function ProposalGuidelines() {
             Proposals (CFP).
             <br />
             It provides:
-          </p>
+          </h5>
           <ul
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
@@ -54,8 +54,8 @@ export default function ProposalGuidelines() {
             <li>Requirements for abstracts/proposals</li>
             <li>Deadlines</li>
           </ul>
-          <p />
-          <p
+          <h5 />
+          <h5
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -66,7 +66,7 @@ export default function ProposalGuidelines() {
             <br />
             Captivate readers with your research description in terms of the
             problem by:
-          </p>
+          </h5>
           <ul
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
@@ -89,8 +89,8 @@ export default function ProposalGuidelines() {
               questions asked so kindly answer relevantly.*
             </li>
           </ul>
-          <p className="pt-5 h5">HAPPY PRESENTING</p>
-          <p />
+          <h5 className="pt-5 h5">HAPPY PRESENTING</h5>
+          <h5 />
         </div>
       </motion.div>
     </motion.div>

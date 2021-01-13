@@ -27,10 +27,10 @@ export default function MainContent() {
           <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
+          <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>
             CODE OF CONDUCT
           </h4>
-          <p
+          <h5
             className="text-justify pt-5"
             style={{ color: "#aaaaaa", lineHeight: "25px" }}
           >
@@ -121,7 +121,7 @@ export default function MainContent() {
             <br /> If you see, overhear or experience a violation of the Code of
             Conduct during a virtual event, and would like to report a
             violation, you please email us at <a href="mailto:elevate@pattarai.in">elevate@pattarai.in</a> <br />
-          </p>
+          </h5>
         </div>
       </motion.div>
     </motion.div>

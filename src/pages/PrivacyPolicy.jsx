@@ -28,10 +28,10 @@ export default function PrivacyPolicy() {
           <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
+          <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>
             PRIVACY POLICY
           </h4>
-          <p
+          <h5
             className="text-justify pt-5"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -112,8 +112,8 @@ export default function PrivacyPolicy() {
             that data processing. This means that we will not share your data
             with third parties except:
             <br />
-          </p>
-          <p
+          </h5>
+          <h5
             style={{
               color: "rgb(170, 170, 170)",
               lineHeight: "25px",
@@ -139,11 +139,11 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             We will not make international transfers of your data.
-          </p>
+          </h5>
 
           <br />
 
-          <p
+          <h5
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
             a copy of your ID or similar document that allows the Organizers to
             properly identify you.
             <br />
-          </p>
+          </h5>
         </div>
       </motion.div>
     </motion.div>
