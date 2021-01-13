@@ -233,14 +233,7 @@ export default function MainContent() {
                       Edge Computing and 5G Networks
                     </h3>
                     <p>
-                      Beyond being able to download a full-length HD movie to
-                      your phone in seconds, 5G is really about connecting
-                      things everywhere. Imagine life-saving applications that
-                      can take flight thanks to lag-free guaranteed connections;
-                      or production lines so predictive they can prevent
-                      interruptions well before they occur. Bring out your
-                      skills so people can measure, understand and manage such
-                      things in real time.
+                    5G and edge computing are opening a world of new revenue opportunities across manufacturing, transport, gaming and more. The benefits edge solutions provide include low latency, high bandwidth, device processing and data offload as well as trusted computing and storage. How can the industry gain an "edge" ahead of competitors? Is moving to edge solutions really important?
                     </p>
                   </li>
                   <li className="event" data-date="">
