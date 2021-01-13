@@ -77,7 +77,7 @@ export default function MainContent() {
             >
             </div>
             <h5 className="text-secondary col-6 text-left d-none d-lg-block ">
-                An interactive online experience by the committee, free for
+                An interactive online experience, free for
                 everyone.
             </h5>
           </div>
@@ -93,7 +93,7 @@ export default function MainContent() {
 
         <div className="container text-secondary text-center mt-md-5 d-lg-none">
           <h5>
-            An interactive online experience by the committee, free for
+            An interactive online experience, free for
             everyone.
           </h5>
         </div>
