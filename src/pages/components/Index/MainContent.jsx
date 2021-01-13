@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Icon from "@mdi/react";
-import { mdiArrowRight } from "@mdi/js";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 
@@ -72,7 +70,7 @@ export default function MainContent() {
       >
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
-            <img src={logo} className="elevate-logo" />
+            <img src={logo} alt="conf_elevate" className="elevate-logo" />
             <div
               className="text-secondary text-left  d-none d-lg-block"
               style={{ borderLeft: "2px solid #666", height: '80px' }}
@@ -122,9 +120,9 @@ export default function MainContent() {
               <span className='d-block d-md-flex container justify-content-center '>
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <Link to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <a to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
                       Buy Free Tickets
-                    </Link>
+                    </a>
                   </h6>
                 </div>
 

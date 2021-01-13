@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import MainContent from "./components/CodeOfConduct/MainContent";
 

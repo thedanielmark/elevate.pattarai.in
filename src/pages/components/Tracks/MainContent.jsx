@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { BrowserRouter as Link } from "react-router-dom";
+import { Tab, Tabs, TabPanel } from "react-tabs";
 import "../../../../src/App.css";
 
 // Import page specific stuff
@@ -29,7 +29,7 @@ export default function MainContent() {
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
             <Link to="/" className="d-flex justify-content-center">
-              <img src={logo} className="elevate-logo" />
+              <img src={logo} alt="conf_elevate" className="elevate-logo" />
             </Link>
             <div
               className="text-secondary text-left  d-none d-lg-block"

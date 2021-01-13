@@ -102,7 +102,7 @@ function MainContent(props) {
     document
       .getElementById("verify-account-button-loader")
       .classList.remove("d-none");
-    if (state.code == "") {
+    if (state.code === "") {
       setState((prevState) => ({
         ...prevState,
         errorMessage: "Please enter a code.",

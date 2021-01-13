@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 // Import page specific stuff
 import logo from "../../../images/elevate_square.png";

@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
 
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <motion.div variants="{fade1}" className="container py-3">
+      <motion.div variants={fade1} className="container py-3">
         <div className="container py-5 text-center">
           <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
