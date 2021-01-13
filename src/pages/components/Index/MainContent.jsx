@@ -120,7 +120,7 @@ export default function MainContent() {
               <span className='d-block d-md-flex container justify-content-center '>
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <a to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <a href="https://www.eventbrite.com/e/elevate-tickets-136634472385" className="gradient-button font-weight-normal btn btn-rounded btn-lg">
                       Buy Free Tickets
                     </a>
                   </h6>
