@@ -240,9 +240,7 @@ export default function MainContent() {
                     <h3 className="text-pink">Moving Smart</h3>
                     <p>
                       The thirst for electric vehicles started hundreds of years
-                      back... Connected and Hybrid vehicles are booming Join us
-                      and talk about all the different types of vehicles and
-                      their characteristics and why they are simply great.
+                      back... Connected and Hybrid vehicles are booming. The introduction of smart infotainment systems has played an important role in making automobile smart, and this just keeps evolving.
                       Drones are very helpful to keep a continuous logistic
                       operation going. Is space exploration becoming too
                       expensive? Here's a call to these enthusiasts.
