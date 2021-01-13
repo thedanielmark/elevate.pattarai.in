@@ -70,15 +70,15 @@ export default function MainContent() {
       >
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
-            <img src={logo} alt="conf_elevate" className="elevate-logo" />
+            <Link to="/"><img src={logo} alt="conf_elevate" className="elevate-logo" /></Link>
             <div
               className="text-secondary text-left  d-none d-lg-block"
               style={{ borderLeft: "2px solid #666", height: '80px' }}
             >
             </div>
             <h5 className="text-secondary col-6 text-left d-none d-lg-block ">
-                An interactive online experience, free for
-                everyone.
+              An interactive online experience, free for
+              everyone.
             </h5>
           </div>
           <div className="d-flex align-items-center">
@@ -101,7 +101,7 @@ export default function MainContent() {
         <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-5 px-0">
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade2}>
-              <div className="landing-big-text text-center col-12" style={{height:'200px'}}>
+              <div className="landing-big-text text-center col-12" style={{ height: '200px' }}>
                 Global Engineering Conference by Pattarai
               </div>
             </motion.div>
@@ -193,7 +193,7 @@ export default function MainContent() {
                       Privacy Policy
                     </span>
                   </Link>
-                </li> 
+                </li>
 
                 <li className="nav-item">
                   <a className="nav-link link-to-light">
