@@ -196,7 +196,7 @@ export default function MainContent() {
                       The incorporation of 5G technology will make it possible
                       to overcome barriers and reduce the current latency period
                       to 0.01 seconds, a crucial time reduction in any surgical
-                      procedure. Interested? Engage here.
+                      procedure. 5G makes teleconsultation, transfer of scans, reports and much more instantly. No doubt, mixed reality is going to take telehealth to a whole new level. Interested? Engage here.
                     </p>
                   </li>
                   <li className="event" data-date="">
@@ -224,11 +224,7 @@ export default function MainContent() {
                   <li className="event" data-date="">
                     <h3 className="text-pink"> Embedded Systems</h3>
                     <p>
-                      5G promises a 100X speed boost compared to 4G LTE. Imagine
-                      such a technology being embedded in your system with
-                      cutting-edge technologies like IoT, AR, VR etc. Unearth
-                      your ideas which might bring about a significant change in
-                      years to come.
+                    5G, together with IoT, is creating a global market for portable medical devices, industrial and surgical robotics, automotive industries, telecom service providers, home automation, and other embbedded technologies behind smart cities. What are your thoughts?
                     </p>
                   </li>
                   <li className="event" data-date="">
