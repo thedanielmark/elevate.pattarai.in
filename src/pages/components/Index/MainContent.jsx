@@ -197,7 +197,7 @@ export default function MainContent() {
 
                 <li className="nav-item">
                   <a className="nav-link link-to-light">
-                    Copyright &copy; 2020 Pattarai. All Rights Reserved.
+                    Copyright &copy; 2021 Pattarai. All Rights Reserved.
                   </a>
                 </li>
               </ul>
