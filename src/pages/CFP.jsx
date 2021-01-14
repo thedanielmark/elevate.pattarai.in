@@ -34,7 +34,6 @@ export default function CfP() {
                     </div>
                     <div class="container text-white pt-5" id="cfpform"></div>
                     {/* <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/viewform?embedded=true" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe> */}
-                    
                 </div>
             </motion.div>
         </motion.div>
