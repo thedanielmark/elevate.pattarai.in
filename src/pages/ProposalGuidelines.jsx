@@ -24,16 +24,11 @@ export default function ProposalGuidelines() {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1}>
-        <div
-          className="container py-5 text-center text-white px-4"
-          style={{ fontFamily: '"Montserrat"' }}
-        >
-          <Link to="/" className='d-flex justify-content-center'>
+        <div className="container py-5 text-center text-white px-4 docs">
+          <Link to="/" className="d-flex justify-content-center">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>
-            PROPOSAL GUIDELINES
-          </h4>
+          <h4>PROPOSAL GUIDELINES</h4>
           <h5
             className="text-justify pt-5"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}

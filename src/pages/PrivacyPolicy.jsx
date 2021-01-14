@@ -24,11 +24,11 @@ export default function PrivacyPolicy() {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1} className="container py-3">
-        <div className="container py-5 text-center">
+        <div className="container py-5 text-center docs">
           <Link to="/" className='d-flex justify-content-center'>
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>
+          <h4>
             PRIVACY POLICY
           </h4>
           <h5

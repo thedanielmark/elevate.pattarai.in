@@ -23,11 +23,11 @@ export default function MainContent() {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1} className="container">
-        <div className="container py-5 text-center">
+        <div className="container py-5 text-center docs">
           <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>
+          <h4>
             CODE OF CONDUCT
           </h4>
           <h5
