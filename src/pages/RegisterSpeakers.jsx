@@ -32,8 +32,8 @@ export default function registerSpeakers() {
                         </Link>
                         <div className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0">connect. learn. elevate^</div>
                     </div>
-                    <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
-                    
+                    <div className="container pt-5 text-white" id="speakerRegistration" ></div> 
+                    {/* <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe> */}
                 </div>
             </motion.div>
         </motion.div>
