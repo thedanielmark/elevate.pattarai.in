@@ -39937,6 +39937,14 @@ div.tagsinput span.tag a {
   background: #00ffaa;
 }
 
+.text-pink {
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #e154e6;
+}
+
 
 
 
