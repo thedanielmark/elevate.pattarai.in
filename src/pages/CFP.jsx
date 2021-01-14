@@ -32,7 +32,7 @@ export default function CfP() {
                         </Link>
                         <div className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0">connect. learn. elevate^</div>
                     </div>
-                    <div class="container" id="cfpform"></div>
+                    <div class="container text-white pt-5" id="cfpform"></div>
                     {/* <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/viewform?embedded=true" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe> */}
                     
                 </div>
