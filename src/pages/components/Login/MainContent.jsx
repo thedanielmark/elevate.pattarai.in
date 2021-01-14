@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
+import { BrowserRouter as Link, withRouter } from "react-router-dom";
 
 // Import page specific stuff
 import logo from "../../../images/logo-xs.png";
@@ -29,7 +29,7 @@ function MainContent(props) {
       .setAttribute("disabled", "disabled");
     document.getElementById("sign-in-button-text").classList.add("d-none");
     document.getElementById("sign-in-button-loader").classList.remove("d-none");
-    if (state.email == "" && state.password != "") {
+    if (state.email === "" && state.password !== "") {
       setState((prevState) => ({
         ...prevState,
         errorMessage: "Please enter an email ID.",
@@ -40,7 +40,7 @@ function MainContent(props) {
         .removeAttribute("disabled", "disabled");
       document.getElementById("sign-in-button-text").classList.remove("d-none");
       document.getElementById("sign-in-button-loader").classList.add("d-none");
-    } else if (state.email != "" && state.password == "") {
+    } else if (state.email !== "" && state.password === "") {
       setState((prevState) => ({
         ...prevState,
         errorMessage: "Please enter a password.",
@@ -51,7 +51,7 @@ function MainContent(props) {
         .removeAttribute("disabled", "disabled");
       document.getElementById("sign-in-button-text").classList.remove("d-none");
       document.getElementById("sign-in-button-loader").classList.add("d-none");
-    } else if (state.email == "" && state.password == "") {
+    } else if (state.email === "" && state.password === "") {
       setState((prevState) => ({
         ...prevState,
         errorMessage: "Enter email and password.",
@@ -124,7 +124,7 @@ function MainContent(props) {
             localStorage.email = response.data.email;
             localStorage.auth_token = response.data.auth_token;
 
-            if (response.data.emailConfirmed == 0) {
+            if (response.data.emailConfirmed === 0) {
               redirectToVerify();
             } else {
               redirectToHome();
@@ -229,7 +229,7 @@ function MainContent(props) {
                               Keep me signed in
                             </label>
                           </div>
-                          <a href="#" className="auth-link text-black">
+                          <a className="auth-link text-black">
                             Forgot password?
                           </a>
                         </div>

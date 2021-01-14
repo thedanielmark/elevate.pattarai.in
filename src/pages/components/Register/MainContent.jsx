@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
+import { BrowserRouter as Link, withRouter } from "react-router-dom";
 
 // Import page specific stuff
 import logo from "../../../images/logo-xs.png";
@@ -44,26 +44,26 @@ function MainContent(props) {
     document.getElementById("password").classList.remove("red-outline");
     document.getElementById("confirm_password").classList.remove("red-outline");
     if (
-      state.full_name == "" ||
-      state.email == "" ||
-      state.password == "" ||
-      state.confirm_password == ""
+      state.full_name === "" ||
+      state.email === "" ||
+      state.password === "" ||
+      state.confirm_password === ""
     ) {
       setState((prevState) => ({
         ...prevState,
         errorMessage: "Please fill all fields.",
       }));
 
-      if (state.full_name == "") {
+      if (state.full_name === "") {
         document.getElementById("full_name").classList.add("red-outline");
       }
-      if (state.email == "") {
+      if (state.email === "") {
         document.getElementById("email").classList.add("red-outline");
       }
-      if (state.password == "") {
+      if (state.password === "") {
         document.getElementById("password").classList.add("red-outline");
       }
-      if (state.confirm_password == "") {
+      if (state.confirm_password === "") {
         document
           .getElementById("confirm_password")
           .classList.add("red-outline");
@@ -75,8 +75,8 @@ function MainContent(props) {
       document.getElementById("sign-up-button-text").classList.remove("d-none");
       document.getElementById("sign-up-button-loader").classList.add("d-none");
     } else {
-      if (state.password != "" && state.confirm_password != "") {
-        if (state.password != state.confirm_password) {
+      if (state.password !== "" && state.confirm_password !== "") {
+        if (state.password !== state.confirm_password) {
           document.getElementById("password").classList.add("red-outline");
           document
             .getElementById("confirm_password")

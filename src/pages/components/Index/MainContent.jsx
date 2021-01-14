@@ -136,7 +136,7 @@ export default function MainContent() {
 
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <Link to={"/registerspeakers"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <Link to="/registerspeakers" className="gradient-button font-weight-normal btn btn-rounded btn-lg">
                       Submit a Proposal
                     </Link>
                   </h6>

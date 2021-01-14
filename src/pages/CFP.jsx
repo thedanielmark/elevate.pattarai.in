@@ -27,11 +27,11 @@ export default function CallForProposal() {
             <motion.div variants={fade1} className="container py-3">
                 <div className="container py-5 text-center">
                     <Link to="/">
-                        <img src={logofull} className="elevate-logo" />
+                        <img alt="conf_elevate" src={logofull} className="elevate-logo" />
                     </Link>
-                    <iframe title="cfp-google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/viewform?embedded=true" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
+                    <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
                     <Link to="/" className='pt-5'>
-                        <img src={logosquare} alt="" height="150vh" className="pb-3 pt-3" srcset="" />
+                        <img src={logosquare} alt="conf_elevate" height="150vh" className="pb-3 pt-3" srcset="" />
                     </Link>
                 </div>
             </motion.div>
