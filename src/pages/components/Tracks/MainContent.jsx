@@ -62,7 +62,7 @@ export default function MainContent() {
               style={{ listStyle: "none" }}
             >
               <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px" }}>AI and Embedded Systems</div>
+                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>AI and Embedded Systems</div>
               </div>
             </Tab>
             <Tab
@@ -70,7 +70,7 @@ export default function MainContent() {
               style={{ listStyle: "none" }}
             >
               <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px" }}>5G and its Applications</div>
+                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>5G and its Applications</div>
               </div>
             </Tab>
             <Tab
@@ -78,7 +78,7 @@ export default function MainContent() {
               style={{ listStyle: "none" }}
             >
               <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px" }}>Nanotech & Quantum Computing</div>
+                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>Nanotech & Quantum Computing</div>
               </div>
             </Tab>
             <Tab
@@ -86,7 +86,7 @@ export default function MainContent() {
               style={{ listStyle: "none" }}
             >
               <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px" }}>Modern Computing</div>
+                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>Modern Computing</div>
               </div>
             </Tab>
           </span>
