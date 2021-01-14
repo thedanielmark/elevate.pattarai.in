@@ -43,7 +43,7 @@ export default class App extends Component {
             component={ProposalGuidelines}
           />
           <Route exact path="/privacy-policy" component={PrivacyPolicy} />
-          <Route exact path="/cfp" component={CFP} />
+          <Route exact path="/registerspeakers" component={CFP} />
           
           <Route exact path="/404" component={Error404} />
           <Redirect to="/404" />

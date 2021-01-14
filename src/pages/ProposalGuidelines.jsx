@@ -28,7 +28,7 @@ export default function ProposalGuidelines() {
           className="container py-5 text-center text-white px-4"
           style={{ fontFamily: '"Montserrat"' }}
         >
-          <Link to="/">
+          <Link to="/" className='d-flex justify-content-center'>
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
           <h4 style={{ color: "#eeeeee", fontFamily: "Helvetica" }}>

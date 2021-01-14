@@ -70,7 +70,7 @@ export default function MainContent() {
       >
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
-            <Link to="/"><img src={logo} alt="conf_elevate" className="elevate-logo" /></Link>
+            <Link to="/" className='d-flex justify-content-center'><img src={logo} alt="conf_elevate" className="elevate-logo" /></Link>
             <div
               className="text-secondary text-left  d-none d-lg-block"
               style={{ borderLeft: "2px solid #666", height: '80px' }}
@@ -136,7 +136,7 @@ export default function MainContent() {
 
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <Link to={"/cfp"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <Link to={"/registerspeakers"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
                       Submit a Proposal
                     </Link>
                   </h6>
@@ -197,7 +197,7 @@ export default function MainContent() {
 
                 <li className="nav-item">
                   <a className="nav-link link-to-light">
-                    Copyright &copy; 2020 Pattarai. All Rights Reserved.
+                    Copyright &copy; 2021 Pattarai. All Rights Reserved.
                   </a>
                 </li>
               </ul>
