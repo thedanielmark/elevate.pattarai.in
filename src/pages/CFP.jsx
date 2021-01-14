@@ -7,7 +7,7 @@ import logofull from "../../src/images/logo-full.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 //Functional Component
-export default function CfP() {
+export default function cfp() {
     const easing = [0.6, -0.05, 0.01, 0.99];
     const fade1 = {
         initial: {

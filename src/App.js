@@ -18,7 +18,7 @@ import ProposalGuidelines from "./pages/ProposalGuidelines";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Tracks from "./pages/Tracks";
 import RegisterSpeakers from "./pages/RegisterSpeakers";
-import CfP from "./pages/CfP";
+import CfP from "./pages/Cfp";
 
 // import Settings from "./pages/Settings";
 import Error404 from "./pages/Error404";
