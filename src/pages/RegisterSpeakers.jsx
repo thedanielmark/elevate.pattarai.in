@@ -1,4 +1,4 @@
-/*CfP.jsx*/
+/*RegisterSpeakers.jsx*/
 import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
@@ -7,7 +7,7 @@ import logofull from "../../src/images/logo-full.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 //Functional Component
-export default function cfp() {
+export default function registerSpeakers() {
     const easing = [0.6, -0.05, 0.01, 0.99];
     const fade1 = {
         initial: {
@@ -32,7 +32,7 @@ export default function cfp() {
                         </Link>
                         <div className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0">connect. learn. elevate^</div>
                     </div>
-                    <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/viewform?embedded=true" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
+                    <iframe title="speaker-register-form" src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link" className='container' height="1000px"  style={{ backgroundColor:'#222222', overflow:'hidden'}} frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
                     
                 </div>
             </motion.div>

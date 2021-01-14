@@ -98,7 +98,6 @@ export default function MainContent() {
             <motion.div variants={fade2}>
               <div
                 className="landing-big-text text-center col-12"
-                style={{ height: "200px" }}
               >
                 Global Engineering Conference by Pattarai
               </div>
