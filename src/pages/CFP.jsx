@@ -1,4 +1,4 @@
-/*CfP.jsx*/
+/* CfP.jsx */
 import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
