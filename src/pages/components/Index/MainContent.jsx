@@ -120,7 +120,7 @@ export default function MainContent() {
                   <h6 className="font-weight-semi-bold">
                     <a
                       href="https://www.eventbrite.com/e/elevate-tickets-136634472385"
-                      className="gradient-button font-weight-normal btn btn-rounded btn-lg"
+                      className="gradient-button btn btn-rounded btn-lg"
                     >
                       Buy Free Tickets
                     </a>
@@ -131,7 +131,7 @@ export default function MainContent() {
                   <h6 className="font-weight-semi-bold">
                     <Link
                       to={"/tracks"}
-                      className="gradient-button font-weight-normal btn btn-rounded btn-lg"
+                      className="gradient-button btn btn-rounded btn-lg"
                     >
                       View Tracks
                     </Link>
@@ -142,7 +142,7 @@ export default function MainContent() {
                   <h6 className="font-weight-semi-bold">
                     <Link
                       to="/registerspeakers"
-                      className="gradient-button font-weight-normal btn btn-rounded btn-lg"
+                      className="gradient-button btn btn-rounded btn-lg"
                     >
                       Submit a Proposal
                     </Link>

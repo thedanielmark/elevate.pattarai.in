@@ -39932,7 +39932,10 @@ div.tagsinput span.tag a {
   color:#cfcfcf;
 }
 
-
+.activeTab {
+  color: white;
+  background: #00ffaa;
+}
 
 
 
