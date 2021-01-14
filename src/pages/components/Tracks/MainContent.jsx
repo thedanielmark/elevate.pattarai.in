@@ -95,7 +95,7 @@ export default function MainContent() {
             <div className="" style={{ backgroundColor: "#070707" }}>
               <div className="card-body d-flex justify-content-center col-12">
                 <ul className="timeline mr-3">
-                  <li className="event" data-date="AI AND EMBEDDED SYSTEMS">
+                  <li className="event" data-date="TRANSCEND">
                     <h3 className="text-pink">Computer Vision</h3>
                     <p>
                       CV is ever surpassing boundaries set by human imagination
@@ -190,7 +190,7 @@ export default function MainContent() {
             <div className="" style={{ backgroundColor: "#070707" }}>
               <div className="card-body d-flex justify-content-center col-12">
                 <ul className="timeline mr-3">
-                  <li className="event" data-date="5G AND ITS APPLICATIONS">
+                  <li className="event" data-date="EDGE">
                     <h3 className="text-pink">Telemed</h3>
                     <p>
                       The incorporation of 5G technology will make it possible
@@ -254,7 +254,7 @@ export default function MainContent() {
             <div className="" style={{ backgroundColor: "#070707" }}>
               <div className="card-body d-flex justify-content-center col-12">
                 <ul className="timeline mr-3">
-                  <li className="event" data-date="NANOTECH & QUANTUM COMPUTING">
+                  <li className="event" data-date="QUANTUM">
                     <h3 className="text-pink">
                       Nanomaterials and their Properties
                     </h3>
@@ -323,7 +323,7 @@ export default function MainContent() {
             <div className="" style={{ backgroundColor: "#070707" }}>
               <div className="card-body d-flex justify-content-center col-12">
                 <ul className="timeline mr-3">
-                  <li className="event" data-date="MODERN COMPUTING">
+                  <li className="event" data-date="EDIFICE">
                     <h3 className="text-pink">
                       Modern Web and Mobile Application Development
                     </h3>
