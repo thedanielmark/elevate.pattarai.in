@@ -99,7 +99,7 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
 
-        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-2 px-0">
+        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5  px-0">
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade2}>
               <div

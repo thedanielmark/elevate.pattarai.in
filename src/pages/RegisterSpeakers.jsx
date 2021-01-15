@@ -3,8 +3,9 @@ import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
 import logosquare from "../../src/images/elevate_square.png";
-import logofull from "../../src/images/logo-full.png";
+import ElevateVideoReveal from "../elevate-logo-reveal.mp4";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "./Footer";
 
 //Functional Component
 export default function RegisterSpeakers() {
@@ -24,7 +25,7 @@ export default function RegisterSpeakers() {
 
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <motion.div variants={fade1} className="container py-3">
+      <motion.div variants={fade1} className="py-3">
         <div
           id="register-speaker-script-holder"
           className="container py-5 text-center"
@@ -62,7 +63,26 @@ export default function RegisterSpeakers() {
             Loading…
           </iframe>
         </div>
+        <div
+          style={{
+            filter: "saturate(20%) contrast(200%)",
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+            height: "300px",
+          }}
+          className="container pb-0 pb-md-5 pr-2"
+        >
+          <video
+            className="pt-0 pt-md-5"
+            loop="true"
+            autoPlay="true"
+            src={ElevateVideoReveal}
+            width="100%"
+          ></video>
+        </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }
