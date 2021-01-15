@@ -69,7 +69,7 @@ export default function MainContent() {
     >
       <motion.div
         variants={fade1}
-        style={{ minHeight: "80vh" }}
+        style={{ minHeight: "130vh" }}
         className="d-flex justify-content-between flex-column"
       >
         <div className="container d-md-flex justify-content-md-between mt-4">
@@ -99,7 +99,7 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
 
-        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-5 px-0">
+        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-2 px-0">
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade2}>
               <div
@@ -159,7 +159,24 @@ export default function MainContent() {
           </motion.div>
         </div>
 
-       
+        <div
+          style={{
+            filter: "saturate(20%) contrast(200%)",
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+            height: "300px",
+          }}
+          className="container pb-0 pb-md-5 pr-2"
+        >
+          <video
+            className="pt-0 pt-md-5"
+            loop="true"
+            autoPlay="true"
+            src={ElevateVideoReveal}
+            width="100%"
+          ></video>
+        </div>
       </motion.div>
     </motion.div>
   );
