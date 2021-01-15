@@ -25,7 +25,10 @@ export default function RegisterSpeakers() {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1} className="container py-3">
-        <div className="container py-5 text-center">
+        <div
+          id="register-speaker-script-holder"
+          className="container py-5 text-center"
+        >
           <div className="d-md-flex d-block align-items-center justify-content-center bg-dark">
             <Link to="/" className="py-2">
               <img
@@ -40,11 +43,13 @@ export default function RegisterSpeakers() {
               connect. learn. elevate^
             </div>
           </div>
+          {/*           
           <div
             className="container pt-5 text-white"
             id="speakerRegistration"
-          ></div>
-          {/* <iframe
+          ></div> */}
+
+          <iframe
             title="speaker-register-form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link"
             className="container"
@@ -55,7 +60,7 @@ export default function RegisterSpeakers() {
             marginWidth={0}
           >
             Loading…
-          </iframe> */}
+          </iframe>
         </div>
       </motion.div>
     </motion.div>
