@@ -39537,9 +39537,9 @@ div.tagsinput span.tag a {
 }
 
 .underbox span {
-  padding-left: 16px;
-  padding-right: 16px;
-  background-image: linear-gradient(to right, transparent calc(80% - 5px), #7d26c2 0%, #fd0081 100%);
+  padding-left: 10px;
+  padding-right: 10px;
+  background-image: linear-gradient(to right, transparent calc(81% - 5px), #7d26c2 0%, #fd0081 100%);
   background-size: 0;
   background-repeat: no-repeat;
   display: inline;
