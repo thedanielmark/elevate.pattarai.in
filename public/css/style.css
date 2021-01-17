@@ -39868,13 +39868,13 @@ div.tagsinput span.tag a {
 }
 
 .timeline .event:before {
-  left: -207px;
+  left: -230px;
   content: attr(data-date);
-  text-align: right;
+  text-align: left;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.5em;
   min-width: 120px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   line-height: 18px;
 }
 
@@ -39950,19 +39950,21 @@ div.tagsinput span.tag a {
   color:#cfcfcf;
 }
 
-.activeTab {
-  color: white;
-  background: #00ffaa;
-}
-
 .text-pink {
-  line-height: 22px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  border-radius: 50px;
+  display: inline;
+  background: linear-gradient(101deg, #2e0041 0%, #5107c7 100%);
   font-weight: bold;
-  color: #e154e6;
+  letter-spacing:3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-right: 3px;
 }
 
+.track-btn {
+  letter-spacing: 1px;
+  line-height: 20px;
+}
 
 
 

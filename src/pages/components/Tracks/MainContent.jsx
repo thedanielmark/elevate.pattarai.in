@@ -61,32 +61,32 @@ export default function MainContent() {
               className="px-2 py-2 text-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>AI and Embedded Systems</div>
+              <div className="gradient-button track-btn btn btn-rounded">
+                AI and Embedded Systems
               </div>
             </Tab>
             <Tab
               className="px-2 py-2 text-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>5G and its Applications</div>
+              <div className="gradient-button track-btn btn btn-rounded">
+                5G and its Applications
               </div>
             </Tab>
             <Tab
               className="px-2 py-2 text-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>Nanotech & Quantum Computing</div>
+              <div className="gradient-button track-btn btn btn-rounded">
+                Nanotech & Quantum Computing
               </div>
             </Tab>
             <Tab
               className="px-2 py-2 text-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "2px", lineHeight: "20px" }}>Modern Computing</div>
+              <div className="gradient-button track-btn btn btn-rounded">
+                Modern Computing
               </div>
             </Tab>
           </span>
@@ -196,7 +196,10 @@ export default function MainContent() {
                       The incorporation of 5G technology will make it possible
                       to overcome barriers and reduce the current latency period
                       to 0.01 seconds, a crucial time reduction in any surgical
-                      procedure. 5G makes teleconsultation, transfer of scans, reports and much more instantly. No doubt, mixed reality is going to take telehealth to a whole new level. Interested? Engage here.
+                      procedure. 5G makes teleconsultation, transfer of scans,
+                      reports and much more instantly. No doubt, mixed reality
+                      is going to take telehealth to a whole new level.
+                      Interested? Engage here.
                     </p>
                   </li>
                   <li className="event" data-date="">
@@ -224,7 +227,11 @@ export default function MainContent() {
                   <li className="event" data-date="">
                     <h3 className="text-pink"> Embedded Systems</h3>
                     <p>
-                    5G, together with IoT, is creating a global market for portable medical devices, industrial and surgical robotics, automotive industries, telecom service providers, home automation, and other embbedded technologies behind smart cities. What are your thoughts?
+                      5G, together with IoT, is creating a global market for
+                      portable medical devices, industrial and surgical
+                      robotics, automotive industries, telecom service
+                      providers, home automation, and other embbedded
+                      technologies behind smart cities. What are your thoughts?
                     </p>
                   </li>
                   <li className="event" data-date="">
@@ -233,17 +240,26 @@ export default function MainContent() {
                       Edge Computing and 5G Networks
                     </h3>
                     <p>
-                    5G and edge computing are opening a world of new revenue opportunities across manufacturing, transport, gaming and more. The benefits edge solutions provide include low latency, high bandwidth, device processing and data offload as well as trusted computing and storage. How can the industry gain an "edge" ahead of competitors? Is moving to edge solutions really important?
+                      5G and edge computing are opening a world of new revenue
+                      opportunities across manufacturing, transport, gaming and
+                      more. The benefits edge solutions provide include low
+                      latency, high bandwidth, device processing and data
+                      offload as well as trusted computing and storage. How can
+                      the industry gain an "edge" ahead of competitors? Is
+                      moving to edge solutions really important?
                     </p>
                   </li>
                   <li className="event" data-date="">
                     <h3 className="text-pink">Moving Smart</h3>
                     <p>
                       The thirst for electric vehicles started hundreds of years
-                      back... Connected and Hybrid vehicles are booming. The introduction of smart infotainment systems has played an important role in making automobile smart, and this just keeps evolving.
-                      Drones are very helpful to keep a continuous logistic
-                      operation going. Is space exploration becoming too
-                      expensive? Here's a call to these enthusiasts.
+                      back... Connected and Hybrid vehicles are booming. The
+                      introduction of smart infotainment systems has played an
+                      important role in making automobile smart, and this just
+                      keeps evolving. Drones are very helpful to keep a
+                      continuous logistic operation going. Is space exploration
+                      becoming too expensive? Here's a call to these
+                      enthusiasts.
                     </p>
                   </li>
                 </ul>
