@@ -39539,7 +39539,7 @@ div.tagsinput span.tag a {
 .landing-big-text {
   font-family: "Inter", sans-serif;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   background: linear-gradient(to right, #7d26c2 0%, #fd0081 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -39780,6 +39780,11 @@ div.tagsinput span.tag a {
 }
 
 .gradient-button:hover {
+  box-shadow: none;
+  color: white;
+}
+
+.gradient-button:active {
   box-shadow: none;
   color: white;
 }
