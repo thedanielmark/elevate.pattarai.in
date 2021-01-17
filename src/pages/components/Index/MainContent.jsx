@@ -129,12 +129,7 @@ export default function MainContent() {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            className="container"
-            exit={{ opacity: 0 }}
-            initial="initial"
-            animate="animate"
-          >
+          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade3}>
               <div className="text-white underbox text-center d-md-block d-none h2">
                 <span>Global Engineering Conference by Pattarai</span>
@@ -150,7 +145,7 @@ export default function MainContent() {
                 </h4>
               </div>
 
-              <span className="d-block d-md-flex container justify-content-center ">
+              <span className="d-block d-md-flex container pb-5 justify-content-center ">
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
                     <a
@@ -186,6 +181,23 @@ export default function MainContent() {
               </span>
             </motion.div>
           </motion.div>
+          <div
+            style={{
+              filter: "saturate(20%) contrast(200%)",
+              overflow: "hidden",
+              alignItems: "center",
+              height: "120px",
+            }}
+            className="pb-0 d-block d-flex d-md-none pb-md-5 pr-2"
+          >
+            <video
+              className="pt-0 pt-md-5"
+              loop="true"
+              autoPlay="true"
+              src={ElevateVideoReveal}
+              width="100%"
+            ></video>
+          </div>
         </div>
       </motion.div>
     </motion.div>
