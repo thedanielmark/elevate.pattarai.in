@@ -39536,6 +39536,20 @@ div.tagsinput span.tag a {
   font-weight: 600;
 }
 
+.underbox span {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-image: linear-gradient(to right, transparent calc(80% - 5px), #7d26c2 0%, #fd0081 100%);
+  background-size: 0;
+  background-repeat: no-repeat;
+  display: inline;
+  transition: 0.5s ease;
+}
+
+.underbox:hover span {
+  background-size: 100%;
+}
+
 .landing-big-text {
   font-family: "Inter", sans-serif;
   font-size: 3rem;

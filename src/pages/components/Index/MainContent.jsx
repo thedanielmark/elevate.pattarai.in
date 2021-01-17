@@ -62,26 +62,27 @@ export default function MainContent() {
 
   return (
     <motion.div
+      variants={fade1}
       className="pb-0 pb-md-5"
       exit={{ opacity: 0 }}
       initial="initial"
       animate="animate"
     >
       <motion.div
-        variants={fade1}
-        style={{ minHeight: "130vh" }}
+        variants={fade2}
+        style={{ minHeight: "80vh" }}
         className="d-flex justify-content-between flex-column"
       >
-        <div className="container d-md-flex justify-content-md-between mt-4">
-          <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
-            <Link to="/" className="d-flex justify-content-center">
+        <div className="d-md-flex justify-content-md-between container mt-4">
+          <div className="d-flex align-items-center py-3 justify-content-center justify-content-lg-start">
+            <Link
+              to="/"
+              className="d-flex d-md-none d-block justify-content-center"
+            >
               <img src={logo} alt="conf_elevate" className="elevate-logo" />
             </Link>
-            <div
-              className="text-secondary text-left  d-none d-lg-block"
-              style={{ borderLeft: "2px solid #666", height: "80px" }}
-            ></div>
-            <h5 className="text-secondary col-6 text-left d-none d-lg-block ">
+
+            <h5 className="text-secondary text-left d-none d-lg-block ">
               An interactive online experience, free for everyone.
             </h5>
           </div>
@@ -99,19 +100,48 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
 
-        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5  px-0">
-          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+        <div className="my-md-5 pt-lg-5 mt-lg-0 mt-5  px-0">
+          <motion.div
+            className="d-md-block d-none"
+            exit={{ opacity: 0 }}
+            initial="initial"
+            animate="animate"
+          >
             <motion.div variants={fade2}>
               <div
-                className="landing-big-text text-center col-12"
+                style={{
+                  filter: "saturate(20%) contrast(200%)",
+                  overflow: "hidden",
+                  display: "flex",
+                  alignItems: "center",
+                  height: "300px",
+                }}
+                className="pb-0 pb-md-5 pr-2"
               >
-                Global Engineering Conference by Pattarai
+                <video
+                  className="pt-0 pt-md-5"
+                  loop="true"
+                  autoPlay="true"
+                  src={ElevateVideoReveal}
+                  width="100%"
+                ></video>
               </div>
             </motion.div>
           </motion.div>
 
-          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+          <motion.div
+            className="container"
+            exit={{ opacity: 0 }}
+            initial="initial"
+            animate="animate"
+          >
             <motion.div variants={fade3}>
+              <div className="text-white underbox text-center d-md-block d-none h2">
+                <span>Global Engineering Conference by Pattarai</span>
+              </div>
+              <div className="text-white landing-big-text d-md-none d-block text-center">
+                Global Engineering Conference by Pattarai
+              </div>
               <div className="text-uppercase text-center text-light mt-5 ">
                 <h4 className="font-weight-semi-bold">
                   <span className="font-weight-normal">MARCH 2021</span>
@@ -156,25 +186,6 @@ export default function MainContent() {
               </span>
             </motion.div>
           </motion.div>
-        </div>
-
-        <div
-          style={{
-            filter: "saturate(20%) contrast(200%)",
-            overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-            height: "300px",
-          }}
-          className="container pb-0 pb-md-5 pr-2"
-        >
-          <video
-            className="pt-0 pt-md-5"
-            loop="true"
-            autoPlay="true"
-            src={ElevateVideoReveal}
-            width="100%"
-          ></video>
         </div>
       </motion.div>
     </motion.div>
