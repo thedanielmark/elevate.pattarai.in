@@ -39537,10 +39537,9 @@ div.tagsinput span.tag a {
 }
 
 .landing-big-text {
-  line-height: 1;
   font-family: "Inter", sans-serif;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: bold;
   background: linear-gradient(to right, #7d26c2 0%, #fd0081 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
