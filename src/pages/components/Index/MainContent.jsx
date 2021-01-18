@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
-import ElevateVideoReveal from "../../../elevate-logo-reveal.mp4";
+import elevateAnimated from "../../../images/elevate-logo-animated.gif";
 
 export default function MainContent() {
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -110,26 +110,20 @@ export default function MainContent() {
             <motion.div variants={fade2}>
               <div
                 style={{
-                  filter: "saturate(20%) contrast(200%)",
                   overflow: "hidden",
                   display: "flex",
                   alignItems: "center",
-                  height: "300px",
+                  height: "30vh",
+                  justifyContent: "center"
                 }}
-                className="pb-0 pb-md-5 pr-2"
+                className="pb-0 pb-md-3"
               >
-                <video
-                  className="pt-0 pt-md-5"
-                  loop="true"
-                  autoPlay="true"
-                  src={ElevateVideoReveal}
-                  width="100%"
-                ></video>
+                <img width="80%" className="pt-0 pl-3 pb-4 pt-md-5" src={elevateAnimated} alt="" srcset=""/>
               </div>
             </motion.div>
           </motion.div>
 
-          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+          <motion.div exit={{ opacity: 0 }} className="pt-lg-4 pt-0" initial="initial" animate="animate">
             <motion.div variants={fade3}>
               <div className="text-white underbox text-center d-md-block d-none h2">
                 <span>Global Engineering Conference by Pattarai</span>
@@ -188,15 +182,9 @@ export default function MainContent() {
               alignItems: "center",
               height: "120px",
             }}
-            className="pb-0 d-block d-flex d-md-none pb-md-5 pr-2"
+            className="pb-0 d-block d-flex d-md-none pb-md-5"
           >
-            <video
-              className="pt-0 pt-md-5"
-              loop="true"
-              autoPlay="true"
-              src={ElevateVideoReveal}
-              width="100%"
-            ></video>
+            <img width="100%" className="pt-0 pt-md-5" src={elevateAnimated} alt="" srcset=""/>
           </div>
         </div>
       </motion.div>

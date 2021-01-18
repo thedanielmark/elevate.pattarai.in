@@ -3,7 +3,7 @@ import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
 import logosquare from "../../src/images/elevate_square.png";
-import ElevateVideoReveal from "../elevate-logo-reveal.mp4";
+import elevateAnimated from "../../src/images/elevate-logo-animated.gif";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Footer from "./Footer";
 
@@ -63,25 +63,18 @@ export default function RegisterSpeakers() {
             Loading…
           </iframe>
         </div>
-        <div
+      </motion.div>
+      <div
           style={{
             filter: "saturate(20%) contrast(200%)",
             overflow: "hidden",
-            display: "flex",
             alignItems: "center",
-            height: "300px",
+            height: "120px",
           }}
-          className="container pb-0 pb-md-5 pr-2"
+          className="pb-0 pb-md-5"
         >
-          <video
-            className="pt-0 pt-md-5"
-            loop="true"
-            autoPlay="true"
-            src={ElevateVideoReveal}
-            width="100%"
-          ></video>
+          <img width="100%" className="pt-0 pt-md-5" src={elevateAnimated} alt="" srcset=""/>
         </div>
-      </motion.div>
       <Footer></Footer>
     </motion.div>
   );
