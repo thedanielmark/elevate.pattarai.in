@@ -4,6 +4,7 @@ import "../App.css";
 import logo from "../../src/images/elevate_square.png";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "./Footer";
 
 //Functional Component
 export default function ProposalGuidelines() {
@@ -88,6 +89,7 @@ export default function ProposalGuidelines() {
           <h5 />
         </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }

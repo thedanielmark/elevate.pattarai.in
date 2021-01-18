@@ -4,6 +4,7 @@ import "../App.css";
 import { motion } from "framer-motion";
 import logo from "../../src/images/elevate_square.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "./Footer";
 
 //Functional Component
 export default function PrivacyPolicy() {
@@ -194,6 +195,7 @@ export default function PrivacyPolicy() {
           </h5>
         </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }

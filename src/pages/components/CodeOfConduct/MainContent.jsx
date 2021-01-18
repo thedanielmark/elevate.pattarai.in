@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "../../Footer";
 
 // Import page specific stuff
 import logo from "../../../images/elevate_square.png";
@@ -124,6 +125,7 @@ export default function MainContent() {
           </h5>
         </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }
