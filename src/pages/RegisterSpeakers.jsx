@@ -40,8 +40,10 @@ export default function RegisterSpeakers() {
                 srcset=""
               />
             </Link>
-            <div className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0">
-              connect. learn. elevate^
+            <div
+              style={{fontFamily:"Montserrat"}}
+             className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0">
+              connect. learn. <strong>elevate.</strong>
             </div>
           </div>
           {/*           
@@ -65,16 +67,23 @@ export default function RegisterSpeakers() {
         </div>
       </motion.div>
       <div
-          style={{
-            filter: "saturate(20%) contrast(200%)",
-            overflow: "hidden",
-            alignItems: "center",
-            height: "120px",
-          }}
-          className="pb-0 pb-md-5"
-        >
-          <img width="100%" className="pt-0 pt-md-5" src={elevateAnimated} alt="" srcset=""/>
-        </div>
+        style={{
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          height: "30vh",
+          justifyContent: "center",
+        }}
+        className="pb-0 pb-md-3"
+      >
+        <img
+          width="70%"
+          className="pt-0 pl-3 pb-4 pt-md-5"
+          src={elevateAnimated}
+          alt=""
+          srcset=""
+        />
+      </div>
       <Footer></Footer>
     </motion.div>
   );
