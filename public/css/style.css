@@ -39793,15 +39793,11 @@ div.tagsinput span.tag a {
   box-shadow: 2px 1000px 1px #000000 inset;
 }
 
-.gradient-button:hover {
+.active, .track-btn:hover {
   box-shadow: none;
   color: white;
 }
 
-.gradient-button:active {
-  box-shadow: none;
-  color: white;
-}
 
 .timeline {
   /* border-left: 3px solid #727cf5; */

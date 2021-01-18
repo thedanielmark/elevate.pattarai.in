@@ -23,20 +23,6 @@ import CallForProposal from "./pages/CallForProposal";
 // import Settings from "./pages/Settings";
 import Error404 from "./pages/Error404";
 
-
-// var registerSpeakerScript = document.createElement('script');
-// registerSpeakerScript.async = true;
-// registerSpeakerScript.defer = true;
-// registerSpeakerScript.src = "https://formfacade.com/include/108981789612968408902/form/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/bootstrap.js?div=speakerRegistration";
-// document.getElementById('register-speaker-script-holder').appendChild(registerSpeakerScript);    
-
-
-// var cfpformScript = document.createElement('script');
-// cfpformScript.async = true;
-// cfpformScript.defer = true;
-// cfpformScript.src = "https://formfacade.com/include/108981789612968408902/form/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/bootstrap.js?div=cfpform";
-// document.getElementById('cfp-script-holder').appendChild(cfpformScript); 
-
 export default class App extends Component {
   render() {
     return (

@@ -7,6 +7,8 @@ import "../../../../src/App.css";
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
 
+
+
 export default function MainContent() {
   const easing = [0.6, -0.05, 0.01, 0.99];
 
@@ -53,41 +55,33 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
         <Tabs
-          className="container mt-5 text-secondary justify-content-center"
+          className="container mt-5  text-secondary justify-content-center"
           style={{ width: "90%" }}
         >
-          <span className="d-block d-md-flex justify-content-center ">
+          <span id="tracksTabs" className="d-block d-md-flex justify-content-center ">
             <Tab
-              className="px-2 py-2 text-center"
+              className="gradient-button active track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button track-btn btn btn-rounded">
-                AI and Embedded Systems
-              </div>
+              AI and Embedded Systems
             </Tab>
             <Tab
-              className="px-2 py-2 text-center"
+              className="gradient-button track-btn mx-2 my-3  text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button track-btn btn btn-rounded">
-                5G and its Applications
-              </div>
+              5G and its Applications
             </Tab>
             <Tab
-              className="px-2 py-2 text-center"
+              className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button track-btn btn btn-rounded">
-                Nanotech & Quantum Computing
-              </div>
+              Nanotech & Quantum Computing
             </Tab>
             <Tab
-              className="px-2 py-2 text-center"
+              className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button track-btn btn btn-rounded">
-                Modern Computing
-              </div>
+              Modern Computing
             </Tab>
           </span>
 
