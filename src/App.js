@@ -18,6 +18,7 @@ import ProposalGuidelines from "./pages/ProposalGuidelines";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Tracks from "./pages/Tracks";
 import RegisterSpeakers from "./pages/RegisterSpeakers";
+import RegisterSpeakersHead from "./pages/RegisterSpeakersHead";
 import CallForProposal from "./pages/CallForProposal";
 
 // import Settings from "./pages/Settings";
@@ -48,6 +49,7 @@ export default class App extends Component {
           />
           <Route exact path="/privacy-policy" component={PrivacyPolicy} />
           <Route exact path="/registerspeakers" component={RegisterSpeakers} />
+          <Route exact path="/registerspeakers_head" component={RegisterSpeakersHead} />
           <Route exact path="/cfp" component={CallForProposal} />
           
           <Route exact path="/404" component={Error404} />
