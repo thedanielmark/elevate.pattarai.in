@@ -3,13 +3,23 @@ import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Tab, Tabs, TabPanel } from "react-tabs";
 import "../../../../src/App.css";
+import $ from "jquery";
 
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
+import { mdiJquery } from "@mdi/js";
 
 
 
 export default function MainContent() {
+
+  function activateTab() {
+    $(".track-btn").click(function() {
+      $(".track-btn").removeClass("active-track");
+      $(this).addClass("active-track");
+    });
+  }
+
   const easing = [0.6, -0.05, 0.01, 0.99];
 
   const fade2 = {
@@ -60,24 +70,28 @@ export default function MainContent() {
         >
           <span id="tracksTabs" className="d-block d-md-flex justify-content-center ">
             <Tab
-              className="gradient-button active track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
+              onClick = {activateTab}
+              className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
               AI and Embedded Systems
             </Tab>
             <Tab
+              onClick = {activateTab}
               className="gradient-button track-btn mx-2 my-3  text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
               5G and its Applications
             </Tab>
             <Tab
+              onClick = {activateTab}
               className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
               Nanotech & Quantum Computing
             </Tab>
             <Tab
+              onClick = {activateTab}
               className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >

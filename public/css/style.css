@@ -39793,7 +39793,7 @@ div.tagsinput span.tag a {
   box-shadow: 2px 1000px 1px #000000 inset;
 }
 
-.active, .track-btn:hover {
+.active-track, .track-btn:hover {
   box-shadow: none;
   color: white;
 }
