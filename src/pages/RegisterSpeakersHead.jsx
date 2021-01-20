@@ -3,9 +3,9 @@ import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
 import logosquare from "../../src/images/elevate_square.png";
-import elevateAnimated from "../../src/images/elevate-logo-animated.gif";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Footer from "./Footer";
+import ElevateVideoReveal from "../elevate-logo-reveal.mp4";
 
 //Functional Component
 export default function RegisterSpeakersHead() {
@@ -41,8 +41,9 @@ export default function RegisterSpeakersHead() {
               />
             </Link>
             <div
-              style={{fontFamily:"Montserrat"}}
-             className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0">
+              style={{ fontFamily: "Montserrat" }}
+              className="h3 text-white pl-md-4 pl-0 pb-3 pb-md-0"
+            >
               connect. learn. <strong>elevate.</strong>
             </div>
           </div>
@@ -68,21 +69,20 @@ export default function RegisterSpeakersHead() {
       </motion.div>
       <div
         style={{
+          filter: "saturate(20%) contrast(200%)",
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
-          height: "30vh",
-          justifyContent: "center",
+          height: "250px",
         }}
-        className="pb-0 pb-md-3"
+        className="container pb-0 pb-md-5 pl-5"
       >
-        <img
-          width="70%"
-          className="pt-0 pl-3 pb-4 pt-md-5"
-          src={elevateAnimated}
-          alt=""
-          srcset=""
-        />
+        <video
+          className="pt-0 pt-md-2"
+          autoPlay="true"
+          src={ElevateVideoReveal}
+          width="100%"
+        ></video>
       </div>
       <Footer></Footer>
     </motion.div>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
-import elevateAnimated from "../../../images/elevate-logo-animated.gif";
+import ElevateVideoReveal from "../../../elevate-logo-reveal.mp4";
 
 export default function MainContent() {
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -63,14 +63,14 @@ export default function MainContent() {
   return (
     <motion.div
       variants={fade1}
-      className="pb-0 pb-md-5"
+      className="pb-0 pb-md-4"
       exit={{ opacity: 0 }}
       initial="initial"
       animate="animate"
     >
       <motion.div
         variants={fade2}
-        style={{ minHeight: "80vh" }}
+        style={{ minHeight: "90vh" }}
         className="d-flex justify-content-between flex-column"
       >
         <div className="d-md-flex justify-content-md-between container mt-4">
@@ -100,7 +100,7 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
 
-        <div className="my-md-5 pt-lg-5 mt-lg-0 mt-5  px-0">
+        <div className="my-md-5  mt-lg-0 mt-5 px-0">
           <motion.div
             className="d-md-block d-none"
             exit={{ opacity: 0 }}
@@ -108,22 +108,27 @@ export default function MainContent() {
             animate="animate"
           >
             <motion.div variants={fade2}>
-              <div
-                style={{
-                  overflow: "hidden",
-                  display: "flex",
-                  alignItems: "center",
-                  height: "30vh",
-                  justifyContent: "center"
-                }}
-                className="pb-0 pb-md-3"
-              >
-                <img width="80%" className="pt-0 pl-3 pb-4 pt-md-5" src={elevateAnimated} alt="" srcset=""/>
-              </div>
+            <div
+              style={{
+                filter: "saturate(20%) contrast(200%)",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                height: "200px",
+              }}
+              className="container pb-0 pb-md-5 pl-5"
+            >
+              <video
+                className="pt-0 pt-md-4"
+                autoPlay="true"
+                src={ElevateVideoReveal}
+                width="100%"
+              ></video>
+            </div>
             </motion.div>
           </motion.div>
 
-          <motion.div exit={{ opacity: 0 }} className="pt-lg-4 pt-0" initial="initial" animate="animate">
+          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade3}>
               <div className="text-white underbox text-center d-md-block d-none h2">
                 <span>Global Engineering Conference by Pattarai</span>
@@ -175,17 +180,6 @@ export default function MainContent() {
               </span>
             </motion.div>
           </motion.div>
-          <div
-            style={{
-              filter: "saturate(20%) contrast(200%)",
-              overflow: "hidden",
-              alignItems: "center",
-              height: "120px",
-            }}
-            className="pb-0 d-block d-flex d-md-none pb-md-5"
-          >
-            <img width="100%" className="pt-0 pt-md-5" src={elevateAnimated} alt="" srcset=""/>
-          </div>
         </div>
       </motion.div>
     </motion.div>
