@@ -144,7 +144,7 @@ export default function MainContent() {
                 </h4>
               </div>
 
-              <span className="d-block d-md-flex container pb-5 justify-content-center ">
+              <span className="d-block d-md-flex container py-5 justify-content-center ">
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
                     <a
