@@ -1,5 +1,6 @@
 /*index.jsx*/
 import React from "react";
+import ReactDOM from 'react-dom'
 import "../App.css";
 import { motion } from "framer-motion";
 import logosquare from "../../src/images/elevate_square.png";
@@ -8,10 +9,21 @@ import Footer from "./Footer";
 import ElevateVideoReveal from "../elevate-logo-reveal.mp4";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-// import Confetti from "react-dom-confetti";
+
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "confetti-react";
+
 
 //Functional Component
-export default function RegisterSpeakersHead() {
+export default function RegisterSpeakers() {
+  const { width, height } = useWindowSize();
+
+
+  function fireConfetti() {
+    var holder = document.querySelector("#confettiHolder");
+    ReactDOM.render(<Confetti width={width} height={height} />, holder);
+  }
+  
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fade1 = {
     initial: {
@@ -38,20 +50,6 @@ export default function RegisterSpeakersHead() {
       },
     },
   };
-
-  // const config = {
-  //   angle: 90,
-  //   spread: 360,
-  //   startVelocity: 40,
-  //   elementCount: 70,
-  //   dragFriction: 0.12,
-  //   duration: 3000,
-  //   stagger: 3,
-  //   width: "10px",
-  //   height: "10px",
-  //   perspective: "500px",
-  //   colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
-  // };
 
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
@@ -153,7 +151,10 @@ export default function RegisterSpeakersHead() {
                     You will be notified via mail with further instructions.
                     <br />
                   </div>
-                  <a className="btn gradient-button btn-rounded btn-lg text-white">
+                  <a
+                    onClick={fireConfetti}
+                    className="btn gradient-button btn-rounded btn-lg text-white"
+                  >
                     <div className="h2">Confetti</div>
                   </a>
                 </div>
@@ -183,6 +184,7 @@ export default function RegisterSpeakersHead() {
           </div>
         </Link>
       </motion.div>
+      <div id="confettiHolder"></div>
       <Footer></Footer>
     </motion.div>
   );
