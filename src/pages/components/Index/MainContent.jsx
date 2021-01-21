@@ -71,7 +71,7 @@ export default function MainContent() {
       <motion.div
         variants={fade2}
         style={{ minHeight: "90vh" }}
-        className="d-flex justify-content-between flex-column"
+        className="d-flex justify-content-between align-items-center flex-column"
       >
         <div className="d-md-flex justify-content-md-between container mt-4">
           <div className="d-flex align-items-center py-3 justify-content-center justify-content-lg-start">
@@ -100,7 +100,7 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
 
-        <div className="my-md-5  mt-lg-0 mt-5 px-0">
+        <div className="my-md-5  mt-lg-0 mt-5 px-0 ">
           <motion.div
             className="d-md-block d-none"
             exit={{ opacity: 0 }}
