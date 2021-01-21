@@ -26,6 +26,19 @@ export default function RegisterSpeakersHead() {
     },
   };
 
+  const fade4 = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+        ease: easing,
+      },
+    },
+  };
+
   // const config = {
   //   angle: 90,
   //   spread: 360,
@@ -149,25 +162,27 @@ export default function RegisterSpeakersHead() {
           </section>
         </div>
       </motion.div>
-      <Link
-        to="/"
-        style={{ background: "#111111" }}
-        className="d-block d-md-flex container mb-3  justify-content-center align-items-center btn "
-      >
-        <img
-          src={logosquare}
-          alt="conf_elevate"
-          height="90vh"
-          className="py-2"
-          srcset=""
-        />
-        <div
-          style={{ fontFamily: "Montserrat" }}
-          className="h4 text-white pb-2 pb-md-0 pl-md-3 pl-0"
+      <motion.div variants={fade4}>
+        <Link
+          to="/"
+          style={{ background: "#111111" }}
+          className="d-block d-md-flex container mb-3  justify-content-center align-items-center btn "
         >
-          connect. learn. <strong>elevate.</strong>
-        </div>
-      </Link>
+          <img
+            src={logosquare}
+            alt="conf_elevate"
+            height="90vh"
+            className="py-2"
+            srcset=""
+          />
+          <div
+            style={{ fontFamily: "Montserrat" }}
+            className="h4 text-white pb-2 pb-md-0 pl-md-3 pl-0"
+          >
+            connect. learn. <strong>elevate.</strong>
+          </div>
+        </Link>
+      </motion.div>
       <Footer></Footer>
     </motion.div>
   );
