@@ -163,7 +163,7 @@ export default function RegisterSpeakers() {
                 className="text-white"
               >
                 <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 01</div>
+                  <div className="h1 font-weight-bold">Step 1</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
                     Register yourself as a speaker <br />
                   </div>
@@ -181,7 +181,7 @@ export default function RegisterSpeakers() {
                 className="text-white"
               >
                 <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 02</div>
+                  <div className="h1 font-weight-bold">Step 2</div>
                   <div className="p text-secondary">OPTIONAL</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
                     Register a secondary speaker <br />
@@ -199,7 +199,7 @@ export default function RegisterSpeakers() {
                 className="text-white"
               >
                 <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 03</div>
+                  <div className="h1 font-weight-bold">Step 3</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
                     Submit your proposal <br />
                   </div>
