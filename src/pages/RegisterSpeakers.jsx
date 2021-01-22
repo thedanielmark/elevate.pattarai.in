@@ -203,7 +203,7 @@ export default function RegisterSpeakers() {
                     onClick={fireConfetti}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
-                    <div className="h2">Confetti</div>
+                    <div className="h2">Celebrate</div>
                   </a>
                 </div>
               </div>
