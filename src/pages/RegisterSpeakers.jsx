@@ -68,7 +68,7 @@ function CfPModal(props) {
         <Modal.Title id="contained-modal-title-vcenter">
           Submit Proposal
           <p classname="text-primary pt-5">
-          *You can come back anytime to submit the proposal.
+            *You can come back anytime to submit the proposal.
           </p>
         </Modal.Title>
       </Modal.Header>
@@ -163,9 +163,9 @@ export default function RegisterSpeakers() {
                 className="text-white"
               >
                 <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 01</div>
+                  <div className="h1 font-weight-bold">Step 1</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    Register yourself as a speaker. <br />
+                    Register yourself as a speaker <br />
                   </div>
                   <a
                     target="_blank"
@@ -181,7 +181,7 @@ export default function RegisterSpeakers() {
                 className="text-white"
               >
                 <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 02</div>
+                  <div className="h1 font-weight-bold">Step 2</div>
                   <div className="p text-secondary">OPTIONAL</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
                     Register a secondary speaker <br />
@@ -199,9 +199,9 @@ export default function RegisterSpeakers() {
                 className="text-white"
               >
                 <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 03</div>
+                  <div className="h1 font-weight-bold">Step 3</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    Submit your Proposal. <br />
+                    Submit your proposal <br />
                   </div>
                   <a
                     onClick={() => setcfpmodalShow(true)}
@@ -219,7 +219,7 @@ export default function RegisterSpeakers() {
                 <div className="card-body align-items-center justify-content-center my-5">
                   <div className="h1 font-weight-bold">You're good to go!</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    You will be notified via mail with further instructions.
+                    You will be notified via mail with further instructions
                     <br />
                   </div>
                   <a
