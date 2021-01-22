@@ -165,7 +165,7 @@ export default function RegisterSpeakers() {
                 <div className="card-body align-items-center justify-content-center my-5">
                   <div className="h1 font-weight-bold">Step 01</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    Register yourself as a speaker. <br />
+                    Register yourself as a speaker <br />
                   </div>
                   <a
                     target="_blank"
@@ -201,7 +201,7 @@ export default function RegisterSpeakers() {
                 <div className="card-body align-items-center justify-content-center my-5">
                   <div className="h1 font-weight-bold">Step 03</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    Submit your Proposal. <br />
+                    Submit your proposal <br />
                   </div>
                   <a
                     onClick={() => setcfpmodalShow(true)}
