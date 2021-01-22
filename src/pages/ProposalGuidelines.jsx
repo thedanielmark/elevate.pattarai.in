@@ -36,10 +36,7 @@ export default function ProposalGuidelines() {
           >
             <strong>What’s a CFP?</strong>
             <br />
-            A CFP is a conference announcement, also known as a Call for
-            Proposals (CFP).
-            <br />
-            It provides:
+            The CFP - Call for Proposals should provide:
           </h5>
           <ul
             className="text-justify pt-2"
@@ -82,7 +79,7 @@ export default function ProposalGuidelines() {
             </li>
             <li>
               Participants will be given a google form with the respective
-              questions asked so kindly answer relevantly.*
+              questions asked so kindly answer relevantly.
             </li>
           </ul>
           <h5 className="pt-5 h5">HAPPY PRESENTING</h5>

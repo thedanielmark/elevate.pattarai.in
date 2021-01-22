@@ -39932,14 +39932,14 @@ div.tagsinput span.tag a {
 }
 
 .docs a {
-  letter-spacing: 2px;
+  text-decoration: none;
   font-weight: bold;
   color:#ffffff;
 }
 
 .docs a:hover {
+  transition: 0.3s ease;
   font-weight: bold;
-  color:#fa61ff;
 }
 
 .docs strong {
