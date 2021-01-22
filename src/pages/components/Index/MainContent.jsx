@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
-import ElevateVideoReveal from "../../../elevate-logo-reveal.mp4";
+import ElevateReveal from "../../../images/logo-animated.gif";
 
 export default function MainContent() {
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -118,12 +118,12 @@ export default function MainContent() {
               }}
               className="container pb-0 pb-md-5 pl-5"
             >
-              <video
+              <img
                 className="pt-0 pt-md-4"
                 autoPlay="true"
-                src={ElevateVideoReveal}
+                src={ElevateReveal}
                 width="100%"
-              ></video>
+              ></img>
             </div>
             </motion.div>
           </motion.div>
