@@ -17,10 +17,18 @@ import { Modal, Button } from "react-bootstrap";
 
 function RegisterSpeakerModal(props) {
   return (
-    <Modal  {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Register Speaker
+          <p classname="text-primary pt-5">
+            *You can come back anytime to continue the registration.
+          </p>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="d-flex justify-content-center">
@@ -37,7 +45,9 @@ function RegisterSpeakerModal(props) {
         </iframe>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-md-between">
-        <p classname="font-weight-bold text-primary">*You can come back anytime to continue the registration.</p>
+        <p classname="font-weight-bold text-primary">
+          *You can come back anytime to continue the registration.
+        </p>
         <Button className="bg-primary btn-lg  btn" onClick={props.onHide}>
           Close
         </Button>
@@ -48,9 +58,19 @@ function RegisterSpeakerModal(props) {
 
 function CfPModal(props) {
   return (
-    <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Submit Proposal</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Submit Proposal
+          <p classname="text-primary pt-5">
+          *You can come back anytime to submit the proposal.
+          </p>
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body className="d-flex justify-content-center">
         <iframe
@@ -66,7 +86,9 @@ function CfPModal(props) {
         </iframe>
       </Modal.Body>
       <Modal.Footer className="d-flex justify-content-md-between">
-        <p classname="font-weight-bold text-primary">*You can come back anytime to submit the Proposal.</p>
+        <p classname="font-weight-bold text-primary">
+          *You can come back anytime to submit the proposal.
+        </p>
         <Button className="bg-primary btn-lg  btn" onClick={props.onHide}>
           Close
         </Button>
@@ -160,8 +182,9 @@ export default function RegisterSpeakers() {
               >
                 <div className="card-body align-items-center justify-content-center my-5">
                   <div className="h1 font-weight-bold">Step 02</div>
+                  <div className="p text-secondary">OPTIONAL</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    If needed, register a secondary speaker <br />
+                    Register a secondary speaker <br />
                   </div>
                   <a
                     onClick={() => setregisterSpeakerModalShow(true)}
