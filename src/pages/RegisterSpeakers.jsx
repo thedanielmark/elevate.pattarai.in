@@ -28,7 +28,7 @@ function RegisterSpeakerModal(props) {
           title="speaker-register-form"
           src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link"
           height="1600px"
-          width="800px"
+          width="1600px"
           frameBorder={0}
           marginHeight={0}
           marginWidth={0}
@@ -57,7 +57,7 @@ function CfPModal(props) {
           title="speaker-register-form"
           src="https://docs.google.com/forms/d/e/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/viewform?embedded=true"
           height="1250px"
-          width="800px"
+          width="1600px"
           frameBorder={0}
           marginHeight={0}
           marginWidth={0}
