@@ -1,29 +1,92 @@
 /*index.jsx*/
 import React from "react";
-import ReactDOM from 'react-dom'
+import ReactDOM from "react-dom";
 import "../App.css";
 import { motion } from "framer-motion";
 import logosquare from "../../src/images/elevate_square.png";
+import logo from "../../src/images/logo-full.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Footer from "./Footer";
-import ElevateVideoReveal from "../elevate-logo-reveal.mp4";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
 import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "confetti-react";
 
+import { Modal, Button } from "react-bootstrap";
 
-//Functional Component
+function RegisterSpeakerModal(props) {
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">Register Speaker</Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="d-flex justify-content-center">
+        <iframe
+          title="speaker-register-form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfrnJKV5_r4eIl8GeuOACL3UfbBX06kGAbZ2jyaDFlYJ2bH7g/viewform?usp=sf_link"
+          height="1600px"
+          width="800px"
+          frameBorder={0}
+          marginHeight={0}
+          marginWidth={0}
+        >
+          Loading…
+        </iframe>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button className="bg-primary btn-lg  btn" onClick={props.onHide}>
+          Close
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
+
+
+
+
+function CfPModal(props) {
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">CfP</Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="d-flex justify-content-center">
+        <iframe
+          title="speaker-register-form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdDFQ_NaCZpRhgGOsgSvtDxykcXUawYOIApo7cioMq5yDyYRw/viewform?embedded=true"
+          height="1250px"
+          width="800px"
+          frameBorder={0}
+          marginHeight={0}
+          marginWidth={0}
+        >
+          Loading…
+        </iframe>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button className="bg-primary btn-lg  btn" onClick={props.onHide}>
+          Close
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
+// Functional Component
 export default function RegisterSpeakers() {
-  const { width, height } = useWindowSize();
+  const [registerSpeakerModalShow, setregisterSpeakerModalShow] = React.useState(false);
+  const [cfpmodalShow, setcfpmodalShow] = React.useState(false);
 
+  const { width, height } = useWindowSize();
 
   function fireConfetti() {
     var holder = document.querySelector("#confettiHolder");
     ReactDOM.render(<Confetti width={width} height={height} />, holder);
   }
-  
+
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fade1 = {
     initial: {
@@ -60,26 +123,10 @@ export default function RegisterSpeakers() {
         >
           <Link
             to="/"
-            className="d-md-flex d-block align-items-center justify-content-center"
+            
+            className="d-flex align-items-center justify-content-center"
           >
-            <div
-              style={{
-                filter: "saturate(20%) contrast(200%)",
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-                height: "100px",
-              }}
-              className="container pb-0 pb-md-5 pl-5"
-            >
-              <video
-                className="pt-0 pt-md-2"
-                autoPlay="true"
-                src={ElevateVideoReveal}
-                width="100%"
-                height="300px"
-              ></video>
-            </div>
+            <img style={{height:'10vh'}} className="pl-4" src={logo}></img>
           </Link>
           <section>
             <Carousel
@@ -98,7 +145,7 @@ export default function RegisterSpeakers() {
                   </div>
                   <a
                     target="_blank"
-                    href="https://forms.gle/GZyXbSZcNKE93HzX8"
+                    onClick={() => setregisterSpeakerModalShow(true)}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
                     <div className="h2">Register</div>
@@ -115,8 +162,7 @@ export default function RegisterSpeakers() {
                     Submit your Proposal. <br />
                   </div>
                   <a
-                    target="_blank"
-                    href="https://forms.gle/MjGggaTVoPzot73y8"
+                    onClick={() => setcfpmodalShow(true)}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
                     <div className="h2">Submit</div>
@@ -133,8 +179,7 @@ export default function RegisterSpeakers() {
                     If needed, register a secondary speaker <br />
                   </div>
                   <a
-                    target="_blank"
-                    href="https://forms.gle/GZyXbSZcNKE93HzX8"
+                    onClick={() => setregisterSpeakerModalShow(true)}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
                     <div className="h2">Register</div>
@@ -160,6 +205,14 @@ export default function RegisterSpeakers() {
                 </div>
               </div>
             </Carousel>
+            <RegisterSpeakerModal
+              show={registerSpeakerModalShow}
+              onHide={() => setregisterSpeakerModalShow(false)}
+            />
+            <CfPModal
+              show={cfpmodalShow}
+              onHide={() => setcfpmodalShow(false)}
+            />
           </section>
         </div>
       </motion.div>
