@@ -17,9 +17,11 @@ import { Modal, Button } from "react-bootstrap";
 
 function RegisterSpeakerModal(props) {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal  {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Register Speaker</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Register Speaker
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body className="d-flex justify-content-center">
         <iframe
@@ -34,7 +36,8 @@ function RegisterSpeakerModal(props) {
           Loading…
         </iframe>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="d-flex justify-content-md-between">
+        <p classname="font-weight-bold text-primary">*You can come back anytime to continue the registration.</p>
         <Button className="bg-primary btn-lg  btn" onClick={props.onHide}>
           Close
         </Button>
@@ -43,15 +46,11 @@ function RegisterSpeakerModal(props) {
   );
 }
 
-
-
-
-
 function CfPModal(props) {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">CfP</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">Submit Proposal</Modal.Title>
       </Modal.Header>
       <Modal.Body className="d-flex justify-content-center">
         <iframe
@@ -66,7 +65,8 @@ function CfPModal(props) {
           Loading…
         </iframe>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="d-flex justify-content-md-between">
+        <p classname="font-weight-bold text-primary">*You can come back anytime to submit the Proposal.</p>
         <Button className="bg-primary btn-lg  btn" onClick={props.onHide}>
           Close
         </Button>
@@ -77,7 +77,10 @@ function CfPModal(props) {
 
 // Functional Component
 export default function RegisterSpeakers() {
-  const [registerSpeakerModalShow, setregisterSpeakerModalShow] = React.useState(false);
+  const [
+    registerSpeakerModalShow,
+    setregisterSpeakerModalShow,
+  ] = React.useState(false);
   const [cfpmodalShow, setcfpmodalShow] = React.useState(false);
 
   const { width, height } = useWindowSize();
@@ -123,10 +126,9 @@ export default function RegisterSpeakers() {
         >
           <Link
             to="/"
-            
             className="d-flex align-items-center justify-content-center"
           >
-            <img style={{height:'10vh'}} className="pl-4" src={logo}></img>
+            <img style={{ height: "10vh" }} className="pl-4" src={logo}></img>
           </Link>
           <section>
             <Carousel
@@ -159,23 +161,6 @@ export default function RegisterSpeakers() {
                 <div className="card-body align-items-center justify-content-center my-5">
                   <div className="h1 font-weight-bold">Step 02</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    Submit your Proposal. <br />
-                  </div>
-                  <a
-                    onClick={() => setcfpmodalShow(true)}
-                    className="btn gradient-button btn-rounded btn-lg text-white"
-                  >
-                    <div className="h2">Submit</div>
-                  </a>
-                </div>
-              </div>
-              <div
-                style={{ background: "#000", height: "500px" }}
-                className="text-white"
-              >
-                <div className="card-body align-items-center justify-content-center my-5">
-                  <div className="h1 font-weight-bold">Step 03</div>
-                  <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
                     If needed, register a secondary speaker <br />
                   </div>
                   <a
@@ -186,6 +171,24 @@ export default function RegisterSpeakers() {
                   </a>
                 </div>
               </div>
+              <div
+                style={{ background: "#000", height: "500px" }}
+                className="text-white"
+              >
+                <div className="card-body align-items-center justify-content-center my-5">
+                  <div className="h1 font-weight-bold">Step 03</div>
+                  <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
+                    Submit your Proposal. <br />
+                  </div>
+                  <a
+                    onClick={() => setcfpmodalShow(true)}
+                    className="btn gradient-button btn-rounded btn-lg text-white"
+                  >
+                    <div className="h2">Submit</div>
+                  </a>
+                </div>
+              </div>
+
               <div
                 style={{ background: "#000", height: "500px" }}
                 className="text-white"
