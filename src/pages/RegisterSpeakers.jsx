@@ -172,7 +172,7 @@ export default function RegisterSpeakers() {
                     onClick={() => setregisterSpeakerModalShow(true)}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
-                    <div className="h2">Register</div>
+                    <div className="h2 pt-1">Register</div>
                   </a>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function RegisterSpeakers() {
                     onClick={() => setregisterSpeakerModalShow(true)}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
-                    <div className="h2">Register</div>
+                    <div className="h2 pt-1">Register</div>
                   </a>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function RegisterSpeakers() {
                     onClick={() => setcfpmodalShow(true)}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
-                    <div className="h2">Submit</div>
+                    <div className="h2 pt-1">Submit</div>
                   </a>
                 </div>
               </div>
@@ -226,7 +226,7 @@ export default function RegisterSpeakers() {
                     onClick={fireConfetti}
                     className="btn gradient-button btn-rounded btn-lg text-white"
                   >
-                    <div className="h2">Celebrate</div>
+                    <div className="h2 pt-1">Celebrate</div>
                   </a>
                 </div>
               </div>
