@@ -68,7 +68,7 @@ function CfPModal(props) {
         <Modal.Title id="contained-modal-title-vcenter">
           Submit Proposal
           <p classname="text-primary pt-5">
-          *You can come back anytime to submit the proposal.
+            *You can come back anytime to submit the proposal.
           </p>
         </Modal.Title>
       </Modal.Header>
@@ -219,7 +219,7 @@ export default function RegisterSpeakers() {
                 <div className="card-body align-items-center justify-content-center my-5">
                   <div className="h1 font-weight-bold">You're good to go!</div>
                   <div style={{ lineHeight: "40px" }} className="h4 pt-3 pb-5 ">
-                    You will be notified via mail with further instructions.
+                    You will be notified via mail with further instructions
                     <br />
                   </div>
                   <a
