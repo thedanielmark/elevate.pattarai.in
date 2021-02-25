@@ -1,13 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tab, Tabs, TabPanel } from "react-tabs";
 import "../../../../src/App.css";
+import $ from "jquery";
 
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
+import { mdiJquery } from "@mdi/js";
+
+
 
 export default function MainContent() {
+
+  function activateTab() {
+    $(".track-btn").click(function() {
+      $(".track-btn").removeClass("active-track");
+      $(this).addClass("active-track");
+    });
+  }
+
   const easing = [0.6, -0.05, 0.01, 0.99];
 
   const fade2 = {
@@ -29,7 +41,7 @@ export default function MainContent() {
         <div className="container d-md-flex justify-content-md-between mt-4">
           <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
             <Link to="/" className="d-flex justify-content-center">
-              <img src={logo} className="elevate-logo" />
+              <img src={logo} alt="conf_elevate" className="elevate-logo" />
             </Link>
             <div
               className="text-secondary text-left  d-none d-lg-block"
@@ -53,41 +65,37 @@ export default function MainContent() {
           <h5>An interactive online experience, free for everyone.</h5>
         </div>
         <Tabs
-          className="container mt-5 text-secondary justify-content-center"
+          className="container mt-5  text-secondary justify-content-center"
           style={{ width: "90%" }}
         >
-          <span className="d-block d-md-flex justify-content-center ">
+          <span id="tracksTabs" className="d-block d-md-flex justify-content-center ">
             <Tab
-              className="px-2 py-2 text-center"
+              onClick = {activateTab}
+              className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "4px" }}>TRANSCEND</div>
-              </div>
+              AI and Embedded Systems
             </Tab>
             <Tab
-              className="px-2 py-2 text-center"
+              onClick = {activateTab}
+              className="gradient-button track-btn mx-2 my-3  text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "4px" }}>EDGE</div>
-              </div>
+              5G and its Applications
             </Tab>
             <Tab
-              className="px-2 py-2 text-center"
+              onClick = {activateTab}
+              className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "4px" }}>QUANTUM</div>
-              </div>
+              Nanotech & Quantum Computing
             </Tab>
             <Tab
-              className="px-2 py-2 text-center"
+              onClick = {activateTab}
+              className="gradient-button track-btn mx-2 my-3 text-center btn btn-rounded d-flex align-items-center px-3 justify-content-center"
               style={{ listStyle: "none" }}
             >
-              <div className="gradient-button btn btn-rounded">
-                <div style={{ letterSpacing: "4px" }}>EDIFICE</div>
-              </div>
+              Modern Computing
             </Tab>
           </span>
 
@@ -196,7 +204,10 @@ export default function MainContent() {
                       The incorporation of 5G technology will make it possible
                       to overcome barriers and reduce the current latency period
                       to 0.01 seconds, a crucial time reduction in any surgical
-                      procedure. Interested? Engage here.
+                      procedure. 5G makes teleconsultation, transfer of scans,
+                      reports and much more instantly. No doubt, mixed reality
+                      is going to take telehealth to a whole new level.
+                      Interested? Engage here.
                     </p>
                   </li>
                   <li className="event" data-date="">
@@ -224,11 +235,11 @@ export default function MainContent() {
                   <li className="event" data-date="">
                     <h3 className="text-pink"> Embedded Systems</h3>
                     <p>
-                      5G promises a 100X speed boost compared to 4G LTE. Imagine
-                      such a technology being embedded in your system with
-                      cutting-edge technologies like IoT, AR, VR etc. Unearth
-                      your ideas which might bring about a significant change in
-                      years to come.
+                      5G, together with IoT, is creating a global market for
+                      portable medical devices, industrial and surgical
+                      robotics, automotive industries, telecom service
+                      providers, home automation, and other embbedded
+                      technologies behind smart cities. What are your thoughts?
                     </p>
                   </li>
                   <li className="event" data-date="">
@@ -237,26 +248,26 @@ export default function MainContent() {
                       Edge Computing and 5G Networks
                     </h3>
                     <p>
-                      Beyond being able to download a full-length HD movie to
-                      your phone in seconds, 5G is really about connecting
-                      things everywhere. Imagine life-saving applications that
-                      can take flight thanks to lag-free guaranteed connections;
-                      or production lines so predictive they can prevent
-                      interruptions well before they occur. Bring out your
-                      skills so people can measure, understand and manage such
-                      things in real time.
+                      5G and edge computing are opening a world of new revenue
+                      opportunities across manufacturing, transport, gaming and
+                      more. The benefits edge solutions provide include low
+                      latency, high bandwidth, device processing and data
+                      offload as well as trusted computing and storage. How can
+                      the industry gain an "edge" ahead of competitors? Is
+                      moving to edge solutions really important?
                     </p>
                   </li>
                   <li className="event" data-date="">
                     <h3 className="text-pink">Moving Smart</h3>
                     <p>
                       The thirst for electric vehicles started hundreds of years
-                      back... Connected and Hybrid vehicles are booming Join us
-                      and talk about all the different types of vehicles and
-                      their characteristics and why they are simply great.
-                      Drones are very helpful to keep a continuous logistic
-                      operation going. Is space exploration becoming too
-                      expensive? Here's a call to these enthusiasts.
+                      back... Connected and Hybrid vehicles are booming. The
+                      introduction of smart infotainment systems has played an
+                      important role in making automobile smart, and this just
+                      keeps evolving. Drones are very helpful to keep a
+                      continuous logistic operation going. Is space exploration
+                      becoming too expensive? Here's a call to these
+                      enthusiasts.
                     </p>
                   </li>
                 </ul>

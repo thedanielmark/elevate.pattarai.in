@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 /*------------------------------------------------------------------
  [Master Stylesheet]
 
@@ -8757,9 +8759,7 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -39536,11 +39536,24 @@ div.tagsinput span.tag a {
   font-weight: 600;
 }
 
+.underbox span {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-image: linear-gradient(to right, transparent calc(81% - 5px), #7d26c2 0%, #fd0081 100%);
+  background-size: 0;
+  background-repeat: no-repeat;
+  display: inline;
+  transition: 0.5s ease;
+}
+
+.underbox:hover span {
+  background-size: 100%;
+}
+
 .landing-big-text {
-  line-height: 1;
   font-family: "Inter", sans-serif;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(to right, #7d26c2 0%, #fd0081 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -39780,7 +39793,8 @@ div.tagsinput span.tag a {
   box-shadow: 2px 1000px 1px #000000 inset;
 }
 
-.gradient-button:hover {
+.active-track, .track-btn:hover, .gradient-button:hover  {
+  transition: 0.5s ease;
   box-shadow: none;
   color: white;
 }
@@ -39850,13 +39864,13 @@ div.tagsinput span.tag a {
 }
 
 .timeline .event:before {
-  left: -207px;
+  left: -230px;
   content: attr(data-date);
-  text-align: right;
+  text-align: left;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.5em;
   min-width: 120px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   line-height: 18px;
 }
 
@@ -39906,12 +39920,51 @@ div.tagsinput span.tag a {
   right: -55.8px;
 }
 
-.text-pink {
-  line-height: 22px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #e154e6;
+.docs {
+  font-family: 'Montserrat', sans-serif;
+  color: "#e5e5e5";
 }
+
+.docs h4 {
+  letter-spacing: 3px;
+  font-weight: bold;
+  color:#ffffff;
+}
+
+.docs a {
+  text-decoration: none;
+  font-weight: bold;
+  color:#ffffff;
+}
+
+.docs a:hover {
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.docs strong {
+  color:#cfcfcf;
+}
+
+.text-pink {
+  border-radius: 50px;
+  display: inline;
+  background: linear-gradient(101deg, #ff00f200 0%, #d100d8a9 100%);
+  font-weight: bold;
+  letter-spacing:3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.track-btn {
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+
+
+
 
 /*# sourceMappingURL=../maps/horizontal-layout-light/style.css.map */

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Link } from "react-router-dom";
 
@@ -44,8 +44,8 @@ export default function MainContent() {
                   <div className="row mt-5">
                     <div className="col-12 text-center mt-xl-2">
                       <Link to={"/"} >
-                          <div className="text-white display-5"> 
-                           Take me home.
+                        <div className="text-white display-5">
+                          Take me home.
                           </div>
                       </Link>
                     </div>
@@ -53,7 +53,7 @@ export default function MainContent() {
                   <div className="row mt-5">
                     <div className="col-12 mt-xl-2">
                       <p className="text-white font-weight-medium text-center">
-                        Copyright &copy; 2021 | All Rights Reserved
+                        Copyright &copy; 2021 Pattarai. All Rights Reserved.
                       </p>
                     </div>
                   </div>

@@ -4,6 +4,7 @@ import "../App.css";
 import logo from "../../src/images/elevate_square.png";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "./Footer";
 
 //Functional Component
 export default function ProposalGuidelines() {
@@ -24,27 +25,19 @@ export default function ProposalGuidelines() {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1}>
-        <div
-          className="container py-5 text-center text-white px-4"
-          style={{ fontFamily: '"Montserrat"' }}
-        >
-          <Link to="/">
+        <div className="container py-5 text-center text-white px-4 docs">
+          <Link to="/" className="d-flex justify-content-center">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
-            PROPOSAL GUIDELINES
-          </h4>
-          <p
+          <h4>PROPOSAL GUIDELINES</h4>
+          <h5
             className="text-justify pt-5"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
             <strong>What’s a CFP?</strong>
             <br />
-            A CFP is a conference announcement, also known as a Call for
-            Proposals (CFP).
-            <br />
-            It provides:
-          </p>
+            The CFP - Call for Proposals should provide:
+          </h5>
           <ul
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
@@ -54,8 +47,8 @@ export default function ProposalGuidelines() {
             <li>Requirements for abstracts/proposals</li>
             <li>Deadlines</li>
           </ul>
-          <p />
-          <p
+          <h5 />
+          <h5
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -66,7 +59,7 @@ export default function ProposalGuidelines() {
             <br />
             Captivate readers with your research description in terms of the
             problem by:
-          </p>
+          </h5>
           <ul
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
@@ -86,13 +79,14 @@ export default function ProposalGuidelines() {
             </li>
             <li>
               Participants will be given a google form with the respective
-              questions asked so kindly answer relevantly.*
+              questions asked so kindly answer relevantly.
             </li>
           </ul>
-          <p className="pt-5 h5">HAPPY PRESENTING</p>
-          <p />
+          <h5 className="pt-5 h5">HAPPY PRESENTING</h5>
+          <h5 />
         </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }

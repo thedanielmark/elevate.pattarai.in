@@ -4,6 +4,7 @@ import "../App.css";
 import { motion } from "framer-motion";
 import logo from "../../src/images/elevate_square.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "./Footer";
 
 //Functional Component
 export default function PrivacyPolicy() {
@@ -23,15 +24,15 @@ export default function PrivacyPolicy() {
 
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-      <motion.div variants="{fade1}" className="container py-3">
-        <div className="container py-5 text-center">
-          <Link to="/">
+      <motion.div variants={fade1} className="container py-3">
+        <div className="container py-5 text-center docs">
+          <Link to="/" className='d-flex justify-content-center'>
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
+          <h4>
             PRIVACY POLICY
           </h4>
-          <p
+          <h5
             className="text-justify pt-5"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -112,8 +113,8 @@ export default function PrivacyPolicy() {
             that data processing. This means that we will not share your data
             with third parties except:
             <br />
-          </p>
-          <p
+          </h5>
+          <h5
             style={{
               color: "rgb(170, 170, 170)",
               lineHeight: "25px",
@@ -139,11 +140,11 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             We will not make international transfers of your data.
-          </p>
+          </h5>
 
           <br />
 
-          <p
+          <h5
             className="text-justify pt-2"
             style={{ color: "rgb(170, 170, 170)", lineHeight: "25px" }}
           >
@@ -191,9 +192,10 @@ export default function PrivacyPolicy() {
             a copy of your ID or similar document that allows the Organizers to
             properly identify you.
             <br />
-          </p>
+          </h5>
         </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }

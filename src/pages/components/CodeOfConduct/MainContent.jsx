@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Footer from "../../Footer";
 
 // Import page specific stuff
 import logo from "../../../images/elevate_square.png";
@@ -23,14 +24,14 @@ export default function MainContent() {
   return (
     <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
       <motion.div variants={fade1} className="container">
-        <div className="container py-5 text-center">
+        <div className="container py-5 text-center docs">
           <Link to="/">
             <img src={logo} alt="" height="150vh" className="pb-3 " srcset="" />
           </Link>
-          <h4 style={{ color: "#eeeeee", fontFamily: "Montserrat" }}>
+          <h4>
             CODE OF CONDUCT
           </h4>
-          <p
+          <h5
             className="text-justify pt-5"
             style={{ color: "#aaaaaa", lineHeight: "25px" }}
           >
@@ -121,9 +122,10 @@ export default function MainContent() {
             <br /> If you see, overhear or experience a violation of the Code of
             Conduct during a virtual event, and would like to report a
             violation, you please email us at <a href="mailto:elevate@pattarai.in">elevate@pattarai.in</a> <br />
-          </p>
+          </h5>
         </div>
       </motion.div>
+      <Footer></Footer>
     </motion.div>
   );
 }

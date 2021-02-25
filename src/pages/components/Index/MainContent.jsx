@@ -1,13 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Icon from "@mdi/react";
-import { mdiArrowRight } from "@mdi/js";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-
-
 
 // Import page specific stuff
 import logo from "../../../images/logo-full.png";
+import ElevateReveal from "../../../images/logo-animated.gif";
 
 export default function MainContent() {
   const easing = [0.6, -0.05, 0.01, 0.99];
@@ -64,23 +61,29 @@ export default function MainContent() {
   };
 
   return (
-    <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+    <motion.div
+      variants={fade1}
+      className="pb-0 pb-md-4"
+      exit={{ opacity: 0 }}
+      initial="initial"
+      animate="animate"
+    >
       <motion.div
-        variants={fade1}
-        style={{ minHeight: "100vh" }}
-        className="d-flex justify-content-between flex-column"
+        variants={fade2}
+        style={{ minHeight: "90vh" }}
+        className="d-flex justify-content-between align-items-center flex-column"
       >
-        <div className="container d-md-flex justify-content-md-between mt-4">
-          <div className="d-flex align-items-center justify-content-center justify-content-lg-start">
-            <img src={logo} className="elevate-logo" />
-            <div
-              className="text-secondary text-left  d-none d-lg-block"
-              style={{ borderLeft: "2px solid #666", height: '80px' }}
+        <div className="d-md-flex justify-content-md-between container mt-4">
+          <div className="d-flex align-items-center py-3 justify-content-center justify-content-lg-start">
+            <Link
+              to="/"
+              className="d-flex d-md-none d-block justify-content-center"
             >
-            </div>
-            <h5 className="text-secondary col-6 text-left d-none d-lg-block ">
-                An interactive online experience by the committee, free for
-                everyone.
+              <img src={logo} alt="conf_elevate" className="elevate-logo" />
+            </Link>
+
+            <h5 className="text-secondary text-left d-none d-lg-block ">
+              An interactive online experience, free for everyone.
             </h5>
           </div>
           <div className="d-flex align-items-center">
@@ -94,43 +97,71 @@ export default function MainContent() {
         </div>
 
         <div className="container text-secondary text-center mt-md-5 d-lg-none">
-          <h5>
-            An interactive online experience by the committee, free for
-            everyone.
-          </h5>
+          <h5>An interactive online experience, free for everyone.</h5>
         </div>
 
-        <div className="container my-md-5 pt-lg-5 mt-lg-0 mt-5 mb-5 px-0">
-          <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+        <div className="my-md-5  mt-lg-0 mt-5 px-0 ">
+          <motion.div
+            className="d-md-block d-none"
+            exit={{ opacity: 0 }}
+            initial="initial"
+            animate="animate"
+          >
             <motion.div variants={fade2}>
-              <div className="landing-big-text text-center col-12" style={{height:'200px'}}>
-                Global Engineering Conference by Pattarai
+              <div
+                style={{
+                  filter: "saturate(20%) contrast(200%)",
+                  overflow: "hidden",
+                  display: "flex",
+                  alignItems: "center",
+                  height: "200px",
+                }}
+                className="container pb-0 pb-md-5 pl-5"
+              >
+                <img
+                  className="pt-0 pt-md-4"
+                  autoPlay="true"
+                  src={ElevateReveal}
+                  width="100%"
+                ></img>
               </div>
             </motion.div>
           </motion.div>
 
           <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
             <motion.div variants={fade3}>
+              <div className="text-white underbox text-center d-md-block d-none h2">
+                <span>Global Engineering Conference by Pattarai</span>
+              </div>
+              <div className="text-white landing-big-text d-md-none d-block text-center">
+                Global Engineering Conference by Pattarai
+              </div>
               <div className="text-uppercase text-center text-light mt-5 ">
                 <h4 className="font-weight-semi-bold">
-                  <span className="font-weight-normal">MARCH 2021</span>
+                  <span className="font-weight-normal">2021</span>
                   <span className="text-secondary px-3">|</span>
                   Online
                 </h4>
               </div>
 
-              <span className='d-block d-md-flex container justify-content-center '>
+              <span className="d-block d-md-flex container py-5 justify-content-center ">
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <Link to={"/register"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <a
+                      href="https://www.eventbrite.com/e/elevate-tickets-136634472385"
+                      className="gradient-button btn btn-rounded btn-lg"
+                    >
                       Buy Free Tickets
-                    </Link>
+                    </a>
                   </h6>
                 </div>
 
                 <div className="text-uppercase text-center  text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <Link to={"/tracks"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <Link
+                      to={"/tracks"}
+                      className="gradient-button btn btn-rounded btn-lg"
+                    >
                       View Tracks
                     </Link>
                   </h6>
@@ -138,7 +169,10 @@ export default function MainContent() {
 
                 <div className="text-uppercase text-center text-light mt-5 px-md-3 px-0">
                   <h6 className="font-weight-semi-bold">
-                    <Link to={"/cfp"} className="gradient-button font-weight-normal btn btn-rounded btn-lg">
+                    <Link
+                      to="/registerspeakers"
+                      className="gradient-button btn btn-rounded btn-lg"
+                    >
                       Submit a Proposal
                     </Link>
                   </h6>
@@ -147,65 +181,6 @@ export default function MainContent() {
             </motion.div>
           </motion.div>
         </div>
-
-        <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-          <motion.div variants={fade4}>
-            <div className="text-secondary text-center py-4 d-md-none">
-              <h5>
-                Hosted by{" "}
-                <strong>
-                  <a href="https://pattarai.in/" className="link-to-light">
-                    Pattarai
-                  </a>
-                </strong>
-              </h5>
-            </div>
-
-            <div className="container mb-4 text-center text-secondary">
-              <ul className="nav justify-content-center d-block d-lg-flex flex-row-reverse">
-                <li className="nav-item">
-                  <a
-                    className="nav-link link-to-light"
-                    href="mailto:elevate@pattarai.in"
-                    target="top"
-                  >
-                    elevate@pattarai.in
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <Link to="/proposal-guidelines">
-                    <span className="nav-link link-to-light">
-                      Proposal Guidelines
-                    </span>
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <Link to="/code-of-conduct">
-                    <span className="nav-link link-to-light">
-                      Code of Conduct
-                    </span>
-                  </Link>
-                </li>
-
-                <li className="nav-item">
-                  <Link to="/privacy-policy">
-                    <span className="nav-link link-to-light">
-                      Privacy Policy
-                    </span>
-                  </Link>
-                </li> 
-
-                <li className="nav-item">
-                  <a className="nav-link link-to-light">
-                    Copyright &copy; 2020 Pattarai. All Rights Reserved.
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-        </motion.div>
       </motion.div>
     </motion.div>
   );
