@@ -108,23 +108,23 @@ export default function MainContent() {
             animate="animate"
           >
             <motion.div variants={fade2}>
-            <div
-              style={{
-                filter: "saturate(20%) contrast(200%)",
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-                height: "200px",
-              }}
-              className="container pb-0 pb-md-5 pl-5"
-            >
-              <img
-                className="pt-0 pt-md-4"
-                autoPlay="true"
-                src={ElevateReveal}
-                width="100%"
-              ></img>
-            </div>
+              <div
+                style={{
+                  filter: "saturate(20%) contrast(200%)",
+                  overflow: "hidden",
+                  display: "flex",
+                  alignItems: "center",
+                  height: "200px",
+                }}
+                className="container pb-0 pb-md-5 pl-5"
+              >
+                <img
+                  className="pt-0 pt-md-4"
+                  autoPlay="true"
+                  src={ElevateReveal}
+                  width="100%"
+                ></img>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -138,7 +138,7 @@ export default function MainContent() {
               </div>
               <div className="text-uppercase text-center text-light mt-5 ">
                 <h4 className="font-weight-semi-bold">
-                  <span className="font-weight-normal">MARCH 2021</span>
+                  <span className="font-weight-normal">2021</span>
                   <span className="text-secondary px-3">|</span>
                   Online
                 </h4>
